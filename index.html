@@ -37,7 +37,7 @@
     </style>
 
 
-  <title>AICC 2022</title>
+  <title>AI4CC 2022</title>
   </head>
 
   <body>
@@ -53,7 +53,7 @@
     <!-- A grey horizontal navbar that becomes vertical on small screens -->
     <nav class="navbar sticky-top navbar-expand-sm" style="margin-top:2em; background: #FFF;">
         <div class="container">
-            <a class="navbar-brand" href="#">AICC 2022</a>
+            <a class="navbar-brand" href="#">AI4CC 2022</a>
             
             <ul class="navbar-nav">
             <li class="nav-item">
@@ -146,7 +146,7 @@
     <div class="container" id="summary">
         <h3>Summary</h3>
         <p>
-        The AI for Content Creation (AICC) workshop at CVPR 2022 brings together researchers in computer vision, machine learning, and AI. Content creation is required for simulation and training data generation, media like photography and videography, virtual reality and gaming, art and design, and documents and advertising (to name just a few application domains).
+        The AI for Content Creation (AI4CC) workshop at CVPR 2022 brings together researchers in computer vision, machine learning, and AI. Content creation is required for simulation and training data generation, media like photography and videography, virtual reality and gaming, art and design, and documents and advertising (to name just a few application domains).
         Recent progress in machine learning, deep learning, and AI techniques has allowed us to turn hours of manual, painstaking content creation work into minutes or seconds of automated or interactive work.
         For instance, generative adversarial networks (GANs) can produce photorealistic images of 2D and 3D items such as humans, landscapes, interior scenes, virtual environments, or even industrial designs.
         Neural networks can super-resolve and super-slomo videos, interpolate between photos with intermediate novel views and even extrapolate, and transfer styles to convincingly render and reinterpret content.
@@ -200,94 +200,106 @@
     </div>
 
     <!--
+    <div class="container w-75">
+        <hr>
+        <h3 id="awards">Awards</h3>
+        <h4>Best paper</h4>
+        <ul>
+            <li>
+            </li>
+        </ul>
+    </div>
+    -->
+
     <div class="container">
+        <!--
         <h3 id="videorecording">Video Recording <a href="https://www.youtube.com/watch?v=x6cHOulDXUo&list=PLNPyQ_mnkEr7ae_dbhv4MG2ja5EI74lzu">(YouTube Playlist)</a></h3>
+        -->
         
         Morning session:<br>
-        <div id="morningplayer"></div>
-        <p><em>Click ▶ to jump to each talk!</em></p>
+        <!--
+            <div id="morningplayer"></div>
+            <p><em>Click ▶ to jump to each talk!</em></p>
+        -->
 
         <table class="table table-sm table-striped">
             <thead>
                 <tr>
-                    <th>Play</th><th scope="col">Time PDT</th><th scope="col">Repeat viewing</th><th scope="col"></td>
+                    <th scope="col"><!--Play--></th><th scope="col">Time CDT</th><th scope="col"></td><th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td></td>
-                    <td>08:00</td>
-                    <td>20:00</td>
+                    <td>08:50</td>
                     <td>Welcome and introductions</td>
+                    <td>👋</td>
+                </tr>
+                <tr>
+                    <td>
+                        <!-- STORE FOR LATER
+                            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('x6cHOulDXUo')">▶</button>
+                        -->
+                    </td>
+                    <td>09:00</td>
+                    <td><a href="https://ps.is.mpg.de/~black">Michael Black (MPI for Intelligent Systems)</a></td>
+                    <td>
+                        <!-- Twitter handle -->
+                        <a href="https://twitter.com/Michael_J_Black"><img src="images/logos/Twitter_Logo.png" width=18px></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>09:25</td>
+                    <td><a href="https://www.ohadf.com/">Ohad Fried (TU Munich)</a></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('x6cHOulDXUo')">▶</button></td>
-                    <td>08:15</td>
-                    <td>20:15</td>
-                    <td><a href="https://www.cs.utexas.edu/users/grauman/">Kristen Grauman (UT Austin)</a></td>
+                    <td></td>
+                    <td>09:50</td>
+                    <td><a href="https://ommer-lab.com/">Björn Ommer (University of Munich)</a></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('FTsW29ZcovM')">▶</button></td>
-                    <td>08:45</td>
-                    <td>20:45</td>
-                    <td><a href="https://www.niessnerlab.org/">Matthias Nießner (TU Munich)</a></td>
-                    <td><a href="https://twitter.com/MattNiessner"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                    <td></td>
+                    <td>10:15</td>
+                    <td>Coffee break</td>
+                    <td>☕</td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('032X8G-Zk6Y')">▶</button></td>
-                    <td>09:15</td>
-                    <td>21:15</td>
-                    <td><a href="https://www.irakemelmacher.com/">Ira Kemelmacher-Shlizerman (University of Washington)</a></td>
-                    <td><a href="https://twitter.com/kemelmi"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('s2NPUUug4Yc')">▶</button></td>
-                    <td>10:00</td>
-                    <td>22:00</td>
-                    <td><a href="https://www.weizmann.ac.il/math/dekel/">Tali Dekel (Weizmann Institute of Science)</a></td> 
-                    <td><a href="http://twitter.com/talidekel"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('OGURjRt6f3g')">▶</button></td>
+                    <td></td>
                     <td>10:30</td>
-                    <td>22:30</td>
-                    <td><a href="http://www.cs.toronto.edu/~urtasun">Raquel Urtasun (Waabi, University of Toronto)</a></td>
-                    <td><a href="https://twitter.com/RaquelUrtasun"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                    <td><a href="http://elisaricci.eu/">Elisa Ricci (University of Trento)</a></td>
+                    <td><a href="https://twitter.com/eliricci_"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('e-JPKe3ySZY')">▶</button></td>
-                    <td>11:00</td>
-                    <td>23:00</td>
-                    <td>Oral session 1: Kips et al., <a href="https://arxiv.org/abs/2105.06407">Deep Graphics Encoder for Real Time Video Makeup Synthesis from Example</a></td>    
                     <td></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('e-JPKe3ySZY',764)">▶</button></td>
-                    <td>11:10</td>
-                    <td>23:10</td>
-                    <td>Oral session 1: Mejjati et al., <a href="https://visual.cs.brown.edu/gaussigan">GaussiGAN: Controllable Image Synthesis with 3D Gaussians from Unposed Silhouettes</a></td>    
+                    <td>10:55</td>
+                    <td><a href="https://www.duygu-ceylan.com/">Duygu Ceylan (Adobe)</a></td>
                     <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>11:20</td>
-                    <td>23:20</td>
+                    <td><a href="https://www.cs.princeton.edu/~olgarus/">Olga Russakovsky (Princeton)</a></td>
+                    <td><a href="https://twitter.com/orussakovsky"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>11:45</td>
                     <td>Poster session 1
                         <ul>
-                            <li>Agrawal et al., <a href="https://arxiv.org/abs/2105.05712">Directional GAN: A Novel Conditioning Strategy for Generative Networks</a></li>
-                            <li>Sushko et al., <a href="https://arxiv.org/abs/2105.05847">Learning to Generate Novel Scene Compositions from Single Images and Videos</a></li>
-                            <li>Zhang et al., <a href="http://arxiv.org/abs/2105.08222">Decorating Your Own Bedroom: Locally Controlling Image Generation with Generative Adversarial Networks</a></li>
-                            <li>Ruiz et al., <a href="https://arxiv.org/abs/2012.05225">MorphGAN: Controllable One-Shot Face Synthesis</a></li>
-                            <li>Park et al., <a href="https://github.com/clovaai/lffont">Few-shot Font Generation with Localized Style Representations and Factorization</a></li>
-                            <li>Kim et al., <a href="https://github.com/naver-ai/StyleMapGAN">Exploiting Spatial Dimensions of Latent in GAN for Real-time Image Editing</a></li>
-                            <li>Kulkarni et al., <a href="https://arxiv.org/abs/2004.08614">Halluci-Net: Scene Completion by Exploiting Object Co-occurrence Relationships</a></li>
-                            <li>Kips et al., <a href="https://arxiv.org/abs/2105.06407">Deep Graphics Encoder for Real Time Video Makeup Synthesis from Example</a></li>
-                            <li>Mejjati et al., <a href="https://visual.cs.brown.edu/gaussigan">GaussiGAN: Controllable Image Synthesis with 3D Gaussians from Unposed Silhouettes</a></li>
+                            <li>Authors et al., <a href="https://arxiv.org/abs/link_here">TITLE</a> | <a href="additionallinks">SupplDoc</a></li>
+                            <li>Authors et al., <a href="https://arxiv.org/abs/link_here">TITLE</a> | <a href="additionallinks">SupplDoc</a></li>
                         </ul>
                     </td>    
                     <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>12:45</td>
+                    <td>Lunch break</td>
+                    <td>🥪</td>
                 </tr>
             </tbody>
         </table>
@@ -295,71 +307,71 @@
 
         <br><br>
         Afternoon session:<br>
+        <!--
         <div id="afternoonplayer"></div>
         <p><em>Click ▶ to jump to each talk!</em></p>
-
+        -->
+        
         <table class="table table-sm table-striped">
             <thead>
                 <tr>
-                    <th>Play</th><th scope="col">Time PDT</th><th scope="col">Repeat viewing</th><th scope="col"></td>
+                    <th scope="col"><!--Play--></th><th scope="col">Time CDT</th><th scope="col"></td><th scope="col"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="afternoonplayer.loadVideoById('DJzMLa8zuJQ')">▶</button></td>
-                    <td>13:00</td>
-                    <td>01:00 (26th)</td>
-                    <td><a href="http://www.stulyakov.com/">Sergey Tulyakov (Snap Research)</a></td>
-                    <td><a href="https://twitter.com/SergeyTulyakov"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="afternoonplayer.loadVideoById('xHTOwuc32ow')">▶</button></td>
+                    <td></td>
                     <td>13:30</td>
-                    <td>01:30 (26th)</td>
-                    <td><a href="https://www.cc.gatech.edu/~parikh">Devi Parikh (Georgia Tech)</a></td>
-                    <td><a href="https://twitter.com/deviparikh"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                    <td>Oral session</td>
+                    <td></td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="afternoonplayer.loadVideoById('RUA4CKiKSic')">▶</button></td>
+                    <td><!-- STORE FOR LATER 
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="afternoonplayer.loadVideoById('DJzMLa8zuJQ')">▶</button>
+                        -->
+                    </td>
                     <td>14:00</td>
-                    <td>02:00 (26th)</td>
-                    <td><a href="https://cephaloponderer.com/">Emily Denton (Google)</a></td>
-                    <td><a href="https://twitter.com/cephaloponderer"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                    <td><a href="http://adityaramesh.com/">Aditya Ramesh (Open AI)</a></td>
+                    <td><a href="https://twitter.com/model_mechanic"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="afternoonplayer.loadVideoById('ZsGEAr_inOQ')">▶</button></td>
-                    <td>14:30</td>
-                    <td>02:30 (26th)</td>
-                    <td><a href="https://jonbarron.info/">Jon Barron (Google)</a></td>
-                    <td><a href="https://twitter.com/jon_barron"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-                </tr>
-                <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="afternoonplayer.loadVideoById('kAkGNpaR9Iw')">▶</button></td>
-                    <td>15:00</td>
-                    <td>03:00 (26th)</td>
-                    <td>Oral session 2: Jahn et al., <a href="https://arxiv.org/abs/2105.06458">High-Resolution Complex Scene Synthesis with Transformers</a></td>
                     <td></td>
+                    <td>14:25</td>
+                    <td>Coffee break</td>
+                    <td>☕</td>
                 </tr>
                 <tr>
-                    <td><button type="button" class="btn btn-outline-secondary btn-sm" onclick="afternoonplayer.loadVideoById('kAkGNpaR9Iw',917)">▶</button></td>
+                    <td></td>
+                    <td>14:45</td>
+                    <td><a href="https://baulab.info/">David Bau (Northeastern University)</a></td>
+                    <td><a href="https://twitter.com/davidbau"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                </tr>
+                
+                <tr>
+                    <td></td>
                     <td>15:10</td>
-                    <td>03:10 (26th)</td>
-                    <td>Oral session 2: Mordvintsev et al., <a href="https://arxiv.org/abs/2105.07299">Texture Generation with Neural Cellular Automata</a></td>    
-                    <td></td>
+                    <td><a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz (University of Washington)</a></td>
+                    <td><a href="https://twitter.com/AdrianaSchulz7"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
                 </tr>
                 <tr>
                     <td></td>
-                    <td>15:20</td>
-                    <td>03:20 (26th) </td>
+                    <td>15:35</td>
+                    <td><a href="https://xunhuang.me/">Xun Huang (NVIDIA)</a></td>
+                    <td><a href="https://twitter.com/xunhuang1995"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>16:00</td>
+                    <td><a href="http://richzhang.github.io/">Richard Zhang (Adobe)</a></td>
+                    <td><a href="https://twitter.com/rzhang88"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>16:25</td>
                     <td>Poster session 2
                         <ul>
-                            <li>Narasimhan et al., <a href="https://drive.google.com/file/d/1DDZHXTrGFWixbwM4Rvf7Kfrze0pzlIYc/view?usp=sharing">Strumming to the Beat: Audio-Conditioned Contrastive Video Textures</a></li>
-                            <li>Frey et al., <a href="https://arxiv.org/abs/2105.06988">Automatic Style Transfer for Non-Linear Video Editing</a></li>
-                            <li>Zhang, Thamizharasan et al., <a href="https://drive.google.com/file/d/1oie_epsUj0Eygm5pKz4DNg7mx99ETgAo/view?usp=sharing">Learning Physically-based Face Material and Lighting Decompositions</a></li>
-                            <li>Tseng et al., <a href="https://hytseng0509.github.io/lecam-gan/">Regularizing Generative Adversarial Networks under Limited Data</a></li>
-                            <li>Xu et al., <a href="https://github.com/genforce/ghfeat">Generative Hierarchical Features from Synthesizing Images</a></li>
-                            <li>Jahn et al., <a href="https://arxiv.org/abs/2105.06458">High-Resolution Complex Scene Synthesis with Transformers</a></li>
-                            <li>Mordvintsev et al., <a href="https://arxiv.org/abs/2105.07299">Texture Generation with Neural Cellular Automata</a></li>
+                            <li>Authors et al., <a href="https://arxiv.org/abs/link_here">TITLE</a> | <a href="additionallinks">SupplDoc</a></li>
+                            <li>Authors et al., <a href="https://arxiv.org/abs/link_here">TITLE</a> | <a href="additionallinks">SupplDoc</a></li>
                         </ul>
                     </td>
                     <td></td>
@@ -367,264 +379,29 @@
             </tbody>
         </table>
     </div>
-    -->
-
-    <!-- <div class="container">
-    <hr>
-    <h3 id="schedule">Schedule</h3>
-        <table class="table table-sm table-striped">
-        <thead>
-            <tr>
-                <th scope="col">Time PDT</th><th scope="col">Repeat viewing</th><th scope="col"></td>
-            </tr>
-        </thead>
-        <tbody>
-            <tr>
-                <td>08:00</td>
-                <td>20:00</td>
-                <td>Welcome and introductions</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>08:15</td>
-                <td>20:15</td>
-                <td><a href="https://www.cs.utexas.edu/users/grauman/">Kristen Grauman (UT Austin)</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>08:45</td>
-                <td>20:45</td>
-                <td><a href="https://www.niessnerlab.org/">Matthias Nießner (TU Munich)</a></td>
-                <td><a href="https://twitter.com/MattNiessner"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-            </tr>
-            <tr>
-                <td>09:15</td>
-                <td>21:15</td>
-                <td><a href="https://www.irakemelmacher.com/">Ira Kemelmacher-Shlizerman (University of Washington)</a></td>
-                <td><a href="https://twitter.com/kemelmi"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-            </tr>
-            <tr>
-                <td>09:45</td>
-                <td>21:45</td>
-                <td>Coffee break</td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>10:00</td>
-                <td>22:00</td>
-                <td><a href="https://www.weizmann.ac.il/math/dekel/">Tali Dekel (Weizmann Institute of Science)</a></td> 
-                <td><a href="http://twitter.com/talidekel"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-            </tr>
-            <tr>
-                <td>10:30</td>
-                <td>22:30</td>
-                <td><a href="http://www.cs.toronto.edu/~urtasun">Raquel Urtasun (Waabi, University of Toronto)</a></td>
-                <td><a href="https://twitter.com/RaquelUrtasun"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-            </tr>
-            <tr>
-                <td>11:00</td>
-                <td>23:00</td>
-                <td>Oral session 1: Kips et al., <a href="https://arxiv.org/abs/2105.06407">Deep Graphics Encoder for Real Time Video Makeup Synthesis from Example</a></td>    
-                <td></td>
-            </tr>
-            <tr>
-                <td>11:10</td>
-                <td>23:10</td>
-                <td>Oral session 1: Mejjati et al., <a href="https://visual.cs.brown.edu/gaussigan">GaussiGAN: Controllable Image Synthesis with 3D Gaussians from Unposed Silhouettes</a></td>    
-                <td></td>
-            </tr>
-            <tr>
-                <td>11:20</td>
-                <td>23:20</td>
-                <td>Poster session 1
-                    <ol>
-                        <li>Agrawal et al., <a href="https://arxiv.org/abs/2105.05712">Directional GAN: A Novel Conditioning Strategy for Generative Networks</a></li>
-                        <li>Sushko et al., <a href="https://arxiv.org/abs/2105.05847">Learning to Generate Novel Scene Compositions from Single Images and Videos</a></li>
-                        <li>Zhang et al., <a href="http://arxiv.org/abs/2105.08222">Decorating Your Own Bedroom: Locally Controlling Image Generation with Generative Adversarial Networks</a></li>
-                        <li>Ruiz et al., <a href="https://arxiv.org/abs/2012.05225">MorphGAN: Controllable One-Shot Face Synthesis</a></li>
-                        <li>Park et al., <a href="https://github.com/clovaai/lffont">Few-shot Font Generation with Localized Style Representations and Factorization</a></li>
-                        <li>Kim et al., <a href="https://github.com/naver-ai/StyleMapGAN">Exploiting Spatial Dimensions of Latent in GAN for Real-time Image Editing</a></li>
-                        <li>Kulkarni et al., <a href="https://arxiv.org/abs/2004.08614">Halluci-Net: Scene Completion by Exploiting Object Co-occurrence Relationships</a></li>
-                        <li>Kips et al., <a href="https://arxiv.org/abs/2105.06407">Deep Graphics Encoder for Real Time Video Makeup Synthesis from Example</a></li>
-                        <li>Mejjati et al., <a href="https://visual.cs.brown.edu/gaussigan">GaussiGAN: Controllable Image Synthesis with 3D Gaussians from Unposed Silhouettes</a></li>
-                    </ol>
-                </td>    
-                <td></td>
-            </tr>
-            <tr>
-                <td>12:00</td>
-                <td>00:00 (26th)</td>
-                <td>Lunch</td>    
-                <td></td>
-            </tr>
-            <tr>
-                <td>13:00</td>
-                <td>01:00 (26th)</td>
-                <td><a href="http://www.stulyakov.com/">Sergey Tulyakov (Snap Research)</a></td>
-                <td><a href="https://twitter.com/SergeyTulyakov"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-            </tr>
-            <tr>
-                <td>13:30</td>
-                <td>01:30 (26th)</td>
-                <td><a href="https://www.cc.gatech.edu/~parikh">Devi Parikh (Georgia Tech)</a></td>
-                <td><a href="https://twitter.com/deviparikh"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-            </tr>
-            <tr>
-                <td>14:00</td>
-                <td>02:00 (26th)</td>
-                <td><a href="https://cephaloponderer.com/">Emily Denton (Google)</a></td>
-                <td><a href="https://twitter.com/cephaloponderer"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-            </tr>
-            <tr>
-                <td>14:30</td>
-                <td>02:30 (26th)</td>
-                <td><a href="https://jonbarron.info/">Jon Barron (Google)</a></td>
-                <td><a href="https://twitter.com/jon_barron"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
-            </tr>
-            <tr>
-                <td>15:00</td>
-                <td>03:00 (26th)</td>
-                <td>Oral session 2: Jahn et al., <a href="https://arxiv.org/abs/2105.06458">High-Resolution Complex Scene Synthesis with Transformers</a></td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>15:10</td>
-                <td>03:10 (26th)</td>
-                <td>Oral session 2: Mordvintsev et al., <a href="https://arxiv.org/abs/2105.07299">Texture Generation with Neural Cellular Automata</a></td>    
-                <td></td>
-            </tr>
-            <tr>
-                <td>15:20</td>
-                <td>03:20 (26th) </td>
-                <td>Poster session 2
-                    <ol>
-                        <li>Narasimhan et al., <a href="https://drive.google.com/file/d/1DDZHXTrGFWixbwM4Rvf7Kfrze0pzlIYc/view?usp=sharing">Strumming to the Beat: Audio-Conditioned Contrastive Video Textures</a></li>
-                        <li>Frey et al., <a href="https://arxiv.org/abs/2105.06988">Automatic Style Transfer for Non-Linear Video Editing</a></li>
-                        <li>Zhang, Thamizharasan et al., <a href="https://drive.google.com/file/d/1oie_epsUj0Eygm5pKz4DNg7mx99ETgAo/view?usp=sharing">Learning Physically-based Face Material and Lighting Decompositions</a></li>
-                        <li>Tseng et al., <a href="https://hytseng0509.github.io/lecam-gan/">Regularizing Generative Adversarial Networks under Limited Data</a></li>
-                        <li>Xu et al., <a href="https://github.com/genforce/ghfeat">Generative Hierarchical Features from Synthesizing Images</a></li>
-                        <li>Jahn et al., <a href="https://arxiv.org/abs/2105.06458">High-Resolution Complex Scene Synthesis with Transformers</a></li>
-                        <li>Mordvintsev et al., <a href="https://arxiv.org/abs/2105.07299">Texture Generation with Neural Cellular Automata</a></li>
-                    </ol>
-                </td>
-                <td></td>
-            </tr>
-            <tr>
-                <td>16:00</td>
-                <td>04:00 (26th)</td>
-                <td>Best paper announcement and closing statements</td>
-                <td></td>
-            </tr>
-        </tbody>
-        </table>
-    </div> -->
-
-    <!--
-    <div class="container w-75">
-        <hr>
-        <h3 id="awards">Awards</h3>
-        <h4>Best paper</h4>
-        <ul>
-            <li>High-Resolution Complex Scene Synthesis with Transformers<br>
-                <em>Manuel Jahn (Heidelberg University); Robin Rombach (Heidelberg University); Bjorn Ommer (Heidelberg University)</em><br>
-                [<a href="https://arxiv.org/abs/2105.06458">arXiv</a>]
-            </li>
-        </ul>
-    </div>
 
 
     <div class="container w-75">
         <hr>
-        <h3 id="papers">All accepted works (in random order)</h3>
+        <h3 id="papers">Presented Works Accepted at Other Venues</h3>
+        <p>In random order</p>
 
-        <h4>Papers (8 pages)</h4>
-        <ul>
-            <li>Directional GAN: A Novel Conditioning Strategy for Generative Networks<br>
-                <em>Shradha Agrawal (Adobe Inc); Shankar Venkitachalam (Adobe Inc); Dhanya Raghu (USC); Deepak Pai (Adobe)</em><br>
-                [<a href="https://arxiv.org/abs/2105.05712">arXiv</a>]
-            </li>
-            <li>Texture Generation with Neural Cellular Automata<br>
-                <em>Alexander Mordvintsev (Google Switzerland GmbH); Eyvind Niklasson (Google Switzerland GmbH); Ettore Randazzo (Google Switzerland GmbH)</em><br>
-                [<a href="https://arxiv.org/abs/2105.07299">arXiv</a>] [<a href="https://selforglive.github.io/cvpr_textures/">Webpage (Interactive Demo)</a>]
-            </li>
-            <li>Halluci-Net: Scene Completion by Exploiting Object Co-occurrence Relationships<br>
-                <em>Kuldeep Kulkarni (Adobe Research); Tejas Gokhale (Arizona State University); Rajhans Singh (Arizona State University); Pavan Turaga (Arizona State University); Aswin Sankaranarayanan (Carnegie Mellon University)</em><br>
-                [<a href="https://arxiv.org/abs/2004.08614">arXiv</a>]
-            </li>
-
-        </ul>        
-
-        <h4>Extended abstracts (4 pages)</h4>
-        <ul>
-            <li>Deep Graphics Encoder for Real Time Video Makeup Synthesis From Example<br>
-                <em>Robin KIPS (L'Oreal); Ruowei Jiang (ModiFace Inc.); Sileye BA (L'Oreal); Edmund Phung (ModiFace Inc); Parham Aarabi (ModiFace Inc.); Pietro Gori (Télécom Paris); Matthieu PERROT (L'Oreal); Isabelle Bloch (Télécom Paris)</em><br>
-                [<a href="https://arxiv.org/abs/2105.06407">arXiv</a>] [<a href="https://drive.google.com/file/d/1oOBtj9unIgQ_LD88DGV-DgywonsvmDCW/view?usp=sharing">Supplemental PDF</a>]
-            </li>
-            <li>Strumming to the Beat: Audio-Conditioned Contrastive Video Textures<br>
-                <em>Medhini Narasimhan (UC Berkeley); Shiry Ginosar (UC Berkeley); Andrew Owens (U Michigan); Alexei A Efros (UC Berkeley); Trevor Darrell (UC Berkeley)</em><br>
-                [<a href="https://drive.google.com/file/d/1DDZHXTrGFWixbwM4Rvf7Kfrze0pzlIYc/view?usp=sharing">PDF (4-page version; peer reviewed)</a>] [<a href="https://arxiv.org/abs/2104.02687">arXiv (8-page version; not peer reviewed)</a>]
-            </li>
-            <li>High-Resolution Complex Scene Synthesis with Transformers<br>
-                <em>Manuel Jahn (Heidelberg University); Robin Rombach (Heidelberg University); Bjorn Ommer (Heidelberg University)</em><br>
-                [<a href="https://arxiv.org/abs/2105.06458">arXiv</a>]
-            </li>
-            <li>Learning to Generate Novel Scene Compositions from Single Images and Videos<br>
-                <em>Vadim Sushko (Bosch Center for Artificial Intelligence); Jürgen Gall (University of Bonn); Anna Khoreva (Bosch Center for Artificial Intelligence)</em><br>
-                [<a href="https://arxiv.org/abs/2105.05847">arXiv</a>]
-            </li>
-            <li>Automatic Style Transfer for Non-Linear Video Editing<br>
-                <em>Nathan Frey (Google Research); Peggy Chi (Google Research); Weilong Yang (Google Inc.); Irfan Essa (Google)</em><br>
-                [<a href="https://arxiv.org/abs/2105.06988">arXiv</a>]
-            </li>
-            <li>Decorating Your Own Bedroom: Locally Controlling Image Generation with Generative Adversarial Networks<br>
-                <em>Chen Zhang (Zhejiang University); Yinghao Xu (Chinese University of Hong Kong); Yujun Shen (Dept. of IE, CUHK)</em><br>
-                [<a href="http://arxiv.org/abs/2105.08222">arXiv</a>]
-            </li>
-            <li>MorphGAN: Controllable One-Shot Face Synthesis<br>
-                <em>Nataniel Ruiz (Boston University); Barry Theobald (Apple); Anurag Ranjan (Apple); Ahmed Hussein Abdelaziz (Apple); Nicholas Apostoloff (Apple Inc.)</em><br>
-                [<a href="https://arxiv.org/abs/2012.05225">arXiv</a>]
-            </li>
-            <li>GaussiGAN: Controllable Image Synthesis with 3D Gaussians from Unposed Silhouettes<br>
-                <em>Youssef Alami Mejjati (University of Bath); Isa Milefchik (Brown University); Aaron K Gokaslan (Cornell); Oliver Wang (Adobe Systems Inc); Kwang In Kim (UNIST); James Tompkin (Brown University)</em><br>
-                [<a href="https://visual.cs.brown.edu/gaussigan">Webpage</a>]
-            </li>
-            <li>Learning Physically-based Face Material and Lighting Decompositions<br>
-                <em>Qian Zhang (Brown University)*; Vikas Thamizharasan (Brown University)*; James Tompkin (Brown University)</em><br>
-                [<a href="https://drive.google.com/file/d/1oie_epsUj0Eygm5pKz4DNg7mx99ETgAo/view?usp=sharing">PDF</a>]
-            </li>
-        </ul>
-
-        <h4>Papers (8 pages)&mdash;also in other proceedings</h4>
+        <!-- EXAMPLE FROM 2021
         <ul>
             <li>Few-shot Font Generation with Localized Style Representations and Factorization<br>
                 <em>Song Park (Yonsei University); Sanghyuk Chun (NAVER AI LAB); Junbum Cha (Clova AI Research, NAVER Corp.); Bado Lee (Clova AI Research, NAVER Corp.); Hyunjung Shim (Yonsei University)</em><br>
                 AAAI 2021<br>
                 [<a href="https://arxiv.org/abs/2009.11042">arXiv</a>] [<a href="https://github.com/clovaai/lffont">Webpage</a>]
             </li>
-            <li>Regularizing Generative Adversarial Networks under Limited Data<br>
-                <em>Hung-Yu Tseng (University of California, Merced); Lu Jiang (Google Research); Ce Liu (Google); Ming-Hsuan Yang (University of California at Merced); Weilong Yang (Google Inc.)</em><br>
-                CVPR 2021<br>
-                [<a href="https://arxiv.org/abs/2104.03310">arXiv</a>] [<a href="https://hytseng0509.github.io/lecam-gan/">Webpage</a>]
-            </li>
-            <li>Exploiting Spatial Dimensions of Latent in GAN for Real-time Image Editing<br>
-                <em>Hyunsu Kim (NAVER AI Lab); Yunjey Choi (NAVER AI Lab); Junho Kim (NAVER AI Lab); Sungjoo Yoo (Seoul National University); Youngjung Uh (Yonsei University)</em><br>
-                CVPR 2021<br>
-                [<a href="https://arxiv.org/abs/2104.14754">arXiv</a>] [<a href="https://github.com/naver-ai/StyleMapGAN">Webpage</a>]
-            </li>
-            <li>Generative Hierarchical Features from Synthesizing Images<br>
-                <em>Yinghao Xu (Chinese University of Hong Kong); Yujun Shen (Dept. of IE, CUHK); Jiapeng Zhu (HKUST); Ceyuan Yang (Chinese University of Hong Kong); Bolei Zhou (CUHK)</em><br>
-                CVPR 2021<br>
-                [<a href="https://arxiv.org/abs/2007.10379">arXiv</a>] [<a href="https://github.com/genforce/ghfeat">Webpage</a>]
-            </li>
         </ul>
+        -->
     </div>
-    -->
 
+    <!--
     <div class="container" id="speakers">
         <hr>
         <h3>Invited Speakers</h3>
 
-        <p>Confirmed speakers:</p>
         <ul>
             <li>Michael Black (Max Planck Institute for Intelligent Systems)</li>
             <li>Olga Russakovsky (Princeton)</li>
@@ -638,7 +415,9 @@
             <li>Xun Huang (NVIDIA)</li>
         </ul>
     </div>
+    -->
 
+    <!--
     <div class="container" id="competitions">
         <hr>
         <h3>Competitions</h3>
@@ -647,7 +426,9 @@
         We are planning an AI-based design competition and an AI-based image generation competition. More details coming soon.
         </p>
     </div>
+    -->
 
+    <!--
     <div class="container" id="submission">
         <hr>
         <h3>Submission Instructions</h3>
@@ -697,12 +478,15 @@
 
         <br><br>
     </div>
-    
-    <div class="container" id="previousworkshops">
+    -->
+
+    <hr>
+
+    <div class="container w-75" id="previousworkshops">
         <h4>Previous Workshops</h4>
         <ul>
-            <li>2021 - <a href="./2021/">AI for Content Creation</a> (Workshop at CVPR 2021). Includes session video recordings!</li>
-            <li>2020 - <a href="./2020/">AI for Content Creation</a> (Workshop at CVPR 2020). Includes session video recordings!</li>
+            <li>2021 - <a href="./2021/">AI for Content Creation</a> (Workshop at CVPR 2021). <br>Includes session video recordings!</li>
+            <li>2020 - <a href="./2020/">AI for Content Creation</a> (Workshop at CVPR 2020). <br>Includes session video recordings!</li>
             <li>2019 - <a href="https://nvlabs.github.io/dl-for-content-creation/">Deep Learning for Content Creation</a> (Tutorial at CVPR 2019)</li>
         </ul>
         <br><br>
@@ -724,6 +508,7 @@
     </footer>
 
     <!-- Javascript to control YouTube player-->
+    <!--
     <script>
         // From https://developers.google.com/youtube/iframe_api_reference
         document.addEventListener("DOMContentLoaded", function(event) {
@@ -739,6 +524,6 @@
             afternoonplayer = new YT.Player('afternoonplayer', {width: '800', height: '450', videoId: 'DJzMLa8zuJQ'});
         }
     </script>
-
+    -->
   </body>
 </html>
