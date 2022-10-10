@@ -235,16 +235,13 @@
     
 
     <div class="container" id="schedule">
-        <h3>Schedule</h3>
-        <!--
-        <h3 id="videorecording">Video Recording <a href="https://www.youtube.com/watch?v=x6cHOulDXUo&list=PLNPyQ_mnkEr7ae_dbhv4MG2ja5EI74lzu">(YouTube Playlist)</a></h3>
-        -->
+        <h3>Schedule &mdash; <a href="https://www.youtube.com/watch?v=A1yFak2TYTQ">Video Recording</a></h3>
         
+        <div id="videoplayer"></div>
+        <p><em>Click ▶ to jump to each talk!</em></p>
+
         Morning session:<br>
-        <!--
-            <div id="morningplayer"></div>
-            <p><em>Click ▶ to jump to each talk!</em></p>
-        -->
+        
 
         <table class="table table-sm table-striped">
             <thead>
@@ -254,18 +251,25 @@
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ')">▶</button></td>
                     <td>08:50</td>
-                    <td>Welcome and introductions</td>
+                    <td>Welcome, introductions, and best papers</td>
                     <td>👋</td>
                 </tr>
                 <tr>
                     <td>
-                        <!-- STORE FOR LATER
-                            <button type="button" class="btn btn-outline-secondary btn-sm" onclick="morningplayer.loadVideoById('x6cHOulDXUo')">▶</button>
-                        -->
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=621')">▶</button>
                     </td>
                     <td>09:00</td>
+                    <td><a href="https://www.ohadf.com/">Ohad Fried (Reichman University)</a></td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=2273')">▶</button>
+                    </td>
+                    <td>09:25</td>
                     <td><a href="https://ps.is.mpg.de/~black">Michael Black (MPI for Intelligent Systems)</a></td>
                     <td>
                         <!-- Twitter handle -->
@@ -273,13 +277,9 @@
                     </td>
                 </tr>
                 <tr>
-                    <td></td>
-                    <td>09:25</td>
-                    <td><a href="https://www.ohadf.com/">Ohad Fried (Reichman University)</a></td>
-                    <td></td>
-                </tr>
-                <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=4080')">▶</button>
+                    </td>
                     <td>09:50</td>
                     <td><a href="https://ommer-lab.com/">Björn Ommer (University of Munich)</a></td>
                     <td></td>
@@ -291,19 +291,25 @@
                     <td>☕</td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=6308')">▶</button>
+                    </td>
                     <td>10:30</td>
                     <td><a href="http://elisaricci.eu/">Elisa Ricci (University of Trento)</a></td>
                     <td><a href="https://twitter.com/eliricci_"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=7659')">▶</button>
+                    </td>
                     <td>10:55</td>
                     <td><a href="https://www.duygu-ceylan.com/">Duygu Ceylan (Adobe)</a></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=9057')">▶</button>
+                    </td>
                     <td>11:20</td>
                     <td><a href="https://www.cs.princeton.edu/~olgarus/">Olga Russakovsky (Princeton)</a></td>
                     <td><a href="https://twitter.com/orussakovsky"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
@@ -362,10 +368,6 @@
 
         <br><br>
         Afternoon session:<br>
-        <!--
-        <div id="afternoonplayer"></div>
-        <p><em>Click ▶ to jump to each talk!</em></p>
-        -->
         
         <table class="table table-sm table-striped">
             <thead>
@@ -375,7 +377,9 @@
             </thead>
             <tbody>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=17209')">▶</button>
+                    </td>
                     <td>13:45</td>
                     <td>Oral session
                         <ul>
@@ -387,9 +391,8 @@
                     <td></td>
                 </tr>
                 <tr>
-                    <td><!-- STORE FOR LATER 
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="afternoonplayer.loadVideoById('DJzMLa8zuJQ')">▶</button>
-                        -->
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=18198')">▶</button>
                     </td>
                     <td>14:00</td>
                     <td><a href="http://adityaramesh.com/">Aditya Ramesh (Open AI DALL·E 2)</a></td>
@@ -402,19 +405,25 @@
                     <td>☕</td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=20819')">▶</button>
+                    </td>
                     <td>14:45</td>
                     <td><a href="https://baulab.info/">David Bau (Northeastern University)</a></td>
                     <td><a href="https://twitter.com/davidbau"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=22330')">▶</button>
+                    </td>
                     <td>15:10</td>
                     <td><a href="https://homes.cs.washington.edu/~adriana/">Adriana Schulz (University of Washington)</a></td>
                     <td><a href="https://twitter.com/AdrianaSchulz7"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=23977')">▶</button>
+                    </td>
                     <td>15:35</td>
                     <td><a href="https://xunhuang.me/">Xun Huang (NVIDIA)</a></td>
                     <td><a href="https://twitter.com/xunhuang1995"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
@@ -426,13 +435,17 @@
                     <td>☕</td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=25982')">▶</button>
+                    </td>
                     <td>16:10</td>
                     <td><a href="http://richzhang.github.io/">Richard Zhang (Adobe)</a></td>
                     <td><a href="https://twitter.com/rzhang88"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
                 </tr>
                 <tr>
-                    <td></td>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('A1yFak2TYTQ?t=27695')">▶</button>
+                    </td>
                     <td>16:35</td>
                     <td><a href="https://chitwansaharia.github.io/">Chitwan Saharia (Google Imagen)</a></td>
                     <td><a href="https://twitter.com/Chitwan_Saharia"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
@@ -685,7 +698,6 @@
     </footer>
 
     <!-- Javascript to control YouTube player-->
-    <!--
     <script>
         // From https://developers.google.com/youtube/iframe_api_reference
         document.addEventListener("DOMContentLoaded", function(event) {
@@ -695,12 +707,11 @@
             firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
         });
 
-        var morningplayer, afternoonplayer;
+        var videoplayer;
         function onYouTubeIframeAPIReady() {
-            morningplayer = new YT.Player('morningplayer', {width: '800', height: '450', videoId: 'x6cHOulDXUo'});
-            afternoonplayer = new YT.Player('afternoonplayer', {width: '800', height: '450', videoId: 'DJzMLa8zuJQ'});
+            videoplayer = new YT.Player('videoplayer', {width: '800', height: '450', videoId: 'A1yFak2TYTQ'});
         }
     </script>
-    -->
+    
   </body>
 </html>
