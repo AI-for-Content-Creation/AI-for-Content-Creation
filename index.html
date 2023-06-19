@@ -428,11 +428,11 @@
                 <tr>
                     <td></td>
                     <td>11:20</td>
-                    <td>Poster session 1
+                    <td>Poster session 1 - West Exhibit Hall #93-#123
                         <!-- In OpenReview submitted order -->
                         <!-- Papers 
                         <br><em>Papers</em> -->
-                        <ul class="noindent">
+                        <ol class="noindent" start="93">
                             {% for item in site.data.papers_2023 %}
                                 {% if item.poster_session == '1' and item.accepted_elsewhere == 'No' %}
                                     {% assign authors = item.authors | split: "|" %}
@@ -458,7 +458,7 @@
                                     </li>
                                 {% endif %}
                             {% endfor %}
-                        </ul>
+                        </ol>
                         
 
                         <!-- Extended Abstracts
@@ -467,7 +467,7 @@
                         
                         <!-- Accepted at Other Venues
                         <br><em>Accepted at Other Venues</em> -->
-                        <ul class="noindent">
+                        <ol class="noindent" start="96">
                             {% for item in site.data.papers_2023 %}
                                 {% if item.poster_session == '1' and item.accepted_elsewhere == 'Yes' %}
                                     {% assign authors = item.authors | split: "|" %}
@@ -493,7 +493,7 @@
                                     </li>
                                 {% endif %}
                             {% endfor %}
-                        </ul>
+                        </ol>
                     </td>    
                     <td></td>
                 </tr>
@@ -602,11 +602,11 @@
                 <tr>
                     <td></td>
                     <td>17:15</td>
-                    <td>Poster session 2
-                                                <!-- In OpenReview submitted order -->
+                    <td>Poster session 2 - West Exhibit Hall #93-#123
+                        <!-- In OpenReview submitted order -->
                         <!-- Papers 
                         <br><em>Papers</em> -->
-                        <ul class="noindent">
+                        <ol class="noindent" start="93">
                             {% for item in site.data.papers_2023 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'No' %}
                                     {% assign authors = item.authors | split: "|" %}
@@ -632,7 +632,7 @@
                                     </li>
                                 {% endif %}
                             {% endfor %}
-                        </ul>
+                        </ol>
                         
 
                         <!-- Extended Abstracts
@@ -641,7 +641,7 @@
                         
                         <!-- Accepted at Other Venues
                         <br><em>Accepted at Other Venues</em> -->
-                        <ul class="noindent">
+                        <ol class="noindent" start="93">
                             {% for item in site.data.papers_2023 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'Yes' %}
                                     {% assign authors = item.authors | split: "|" %}
@@ -667,7 +667,7 @@
                                     </li>
                                 {% endif %}
                             {% endfor %}
-                        </ul>                        
+                        </ol>                        
                     </td>
                     <td></td>
                 </tr>
