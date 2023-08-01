@@ -1,0 +1,26 @@
+[
+    {
+        "name": "Google",
+        "logo": "google_logo_tp.png"
+    },
+    {
+        "name": "NVIDIA",
+        "logo": "NVIDIALogo_2D.png"
+    },
+    {
+        "name": "University of Pennsylvania",
+        "logo": "upenn.png"
+    },
+    {
+        "name": "Carnegie Mellon University",
+        "logo": "cmu.png"        
+    },
+    {
+        "name": "Brown University",
+        "logo": "brown-cs-logo.png"
+    },
+    {
+        "name": "Brown University",
+        "logo": "brown-cs-logo.png"
+    }
+]

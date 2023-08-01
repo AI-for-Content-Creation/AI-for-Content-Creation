@@ -111,11 +111,9 @@
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#summary">Summary</a>
             </li>
-            <!--
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#awards">Awards</a>
             </li>
-            -->
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#schedule">Schedule</a>
             </li>
@@ -252,16 +250,13 @@
 
         <p>
         Welcome! - <br>
-        <a class="link-primary" href="https://deqings.github.io/">Deqing Sun (Google)</a> <a href="https://twitter.com/DeqingSun"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>
-        <a class="link-primary" href="https://lingjie0206.github.io/">Lingjie Liu (UPenn)</a> <a href="https://twitter.com/LingjieLiu1"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>
-        <a class="link-primary" href="https://fitsumreda.github.io/">Fitsum Reda (NVIDIA)</a> <a href="https://twitter.com/fitsumreda"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>
-        <a class="link-primary" href="https://www.linkedin.com/in/huiwen-chang-999962156/">Huiwen Chang (Google)</a> <br>
-        <a class="link-primary" href="http://www.lujiang.info/">Lu Jiang (Google)</a> <a href="https://twitter.com/roadjiang"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>
-        <a class="link-primary" href="https://seungjunnah.github.io/">Seungjun Nah (NVIDIA)</a> <br>
-        <a class="link-primary" href="https://yijunmaverick.github.io/">Yijun Li (Adobe)</a> <br>
-        <a class="link-primary" href="https://tcwang0509.github.io/">Ting-Chun Wang (NVIDIA)</a> <a href="https://twitter.com/tcwang0509/"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>
-        <a class="link-primary" href="https://www.cs.cmu.edu/~junyanz/">Jun-Yan Zhu (CMU)</a> <a href="https://twitter.com/junyanz89/"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>
-        <a class="link-primary" href="http://www.jamestompkin.com/">James Tompkin (Brown)</a> <a href="https://twitter.com/jtompkin"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>
+
+        {% for item in site.data.organizers %}
+            {% if item.years contains 2023 %}
+                <a class="link-primary" href="{{ item.webpage }}">{{ item.name }} ({{ item.affiliation }})</a> <a href="{{ item.twitter }}"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            {% endif %}
+        {% endfor %}
+
         </p>
     </div>
 
@@ -354,7 +349,30 @@
     </div>
     -->
 
+    <div class="container" id="awards">
+        <hr>
+        <h3>Awards</h3>
+        <ul>
+        {% for item in site.data.papers_2023 %}
+            {% if item.award == "bestpaper" %}
+                <li><h5>Best paper</h5> {% include paperitem.html item=item %}</li><br>
+            {% endif %}
+        {% endfor %}
+        {% for item in site.data.papers_2023 %}
+            {% if item.award == "bestpaperrunnerup" %}
+                <li><h5>Best paper (runner up)</h5> {% include paperitem.html item=item %}</li><br>
+            {% endif %}
+        {% endfor %}
+        {% for item in site.data.papers_2023 %}
+            {% if item.award == "bestposter" %}
+                <li><h5>Best poster</h5> {% include paperitem.html item=item %}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+
     <div class="container" id="schedule">
+        <hr>
         <h3>Tentative Schedule</h3> 
         <!-- &mdash; <a href="https://www.youtube.com/watch?v=A1yFak2TYTQ">Video Recording</a></h3>
         
@@ -435,27 +453,7 @@
                         <ol class="noindent" start="93">
                             {% for item in site.data.papers_2023 %}
                                 {% if item.poster_session == '1' and item.accepted_elsewhere == 'No' %}
-                                    {% assign authors = item.authors | split: "|" %}
-    
-                                    <li>
-                                        {% if item.arXiv != nil %}
-                                            <a href="{{ item.arXiv }}">{{ item.title }}</a>
-                                        {% else %}
-                                            {{ item.title }}
-                                        {% endif %}
-                                        <br>
-                                        {% for author in authors %}
-                                            {{ author }}{% unless forloop.last %},{% endunless %}
-                                        {% endfor %}
-    
-                                        {% if item.webpage != nil %}
-                                        <a href="{{ item.webpage }}">[{{ item.webpage }}]</a>
-                                        {% endif %}
-
-                                        {% if item.publication_conference_if_published != nil %}
-                                        &mdash; {{ item.publication_conference_if_published }}
-                                        {% endif %}
-                                    </li>
+                                    <li> {% include paperitem.html item=item %} </li>
                                 {% endif %}
                             {% endfor %}
                         </ol>
@@ -469,28 +467,8 @@
                         <br><em>Accepted at Other Venues</em> -->
                         <ol class="noindent" start="96">
                             {% for item in site.data.papers_2023 %}
-                                {% if item.poster_session == '1' and item.accepted_elsewhere == 'Yes' %}
-                                    {% assign authors = item.authors | split: "|" %}
-    
-                                    <li>
-                                        {% if item.arXiv != nil %}
-                                            <a href="{{ item.arXiv }}">{{ item.title }}</a>
-                                        {% else %}
-                                            {{ item.title }}
-                                        {% endif %}
-                                        <br>
-                                        {% for author in authors %}
-                                            {{ author }}{% unless forloop.last %},{% endunless %}
-                                        {% endfor %}
-    
-                                        {% if item.webpage != nil %}
-                                        <a href="{{ item.webpage }}">[{{ item.webpage }}]</a>
-                                        {% endif %}
-
-                                        {% if item.publication_conference_if_published != nil %}
-                                        &mdash; {{ item.publication_conference_if_published }}
-                                        {% endif %}
-                                    </li>
+                                {% if item.poster_session == '1' and item.accepted_elsewhere == 'Yes' %}    
+                                    <li> {% include paperitem.html item=item %} </li>
                                 {% endif %}
                             {% endfor %}
                         </ol>
@@ -525,23 +503,7 @@
                         <ul class="noindent">
                         {% for item in site.data.papers_2023 %}
                             {% if item.decision == 'Accept (Oral)' %}
-                                {% assign authors = item.authors | split: "|" %}
-
-                                <li>
-                                    {% if item.arXiv != nil %}
-                                        <a href="{{ item.arXiv }}">{{ item.title }}</a>
-                                    {% else %}
-                                        {{ item.title }}
-                                    {% endif %}
-                                    <br>
-                                    {% for author in authors %}
-                                        {{ author }}{% unless forloop.last %},{% endunless %}
-                                    {% endfor %}
-
-                                    {% if item.webpage != nil %}
-                                    <a href="{{ item.webpage }}">[{{ item.webpage }}]</a>
-                                    {% endif %}
-                                </li>
+                                <li> {% include paperitem.html item=item %} </li>
                             {% endif %}
                         {% endfor %}
                         </ul>
@@ -609,27 +571,7 @@
                         <ol class="noindent" start="94">
                             {% for item in site.data.papers_2023 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'No' %}
-                                    {% assign authors = item.authors | split: "|" %}
-    
-                                    <li>
-                                        {% if item.arXiv != nil %}
-                                            <a href="{{ item.arXiv }}">{{ item.title }}</a>
-                                        {% else %}
-                                            {{ item.title }}
-                                        {% endif %}
-                                        <br>
-                                        {% for author in authors %}
-                                            {{ author }}{% unless forloop.last %},{% endunless %}
-                                        {% endfor %}
-    
-                                        {% if item.webpage != nil %}
-                                        <a href="{{ item.webpage }}">[{{ item.webpage }}]</a>
-                                        {% endif %}
-
-                                        {% if item.publication_conference_if_published != nil %}
-                                        &mdash; {{ item.publication_conference_if_published }}
-                                        {% endif %}
-                                    </li>
+                                    <li> {% include paperitem.html item=item %} </li>
                                 {% endif %}
                             {% endfor %}
                         </ol>
@@ -644,27 +586,7 @@
                         <ol class="noindent" start="93">
                             {% for item in site.data.papers_2023 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'Yes' %}
-                                    {% assign authors = item.authors | split: "|" %}
-    
-                                    <li>
-                                        {% if item.arXiv != nil %}
-                                            <a href="{{ item.arXiv }}">{{ item.title }}</a>
-                                        {% else %}
-                                            {{ item.title }}
-                                        {% endif %}
-                                        <br>
-                                        {% for author in authors %}
-                                            {{ author }}{% unless forloop.last %},{% endunless %}
-                                        {% endfor %}
-    
-                                        {% if item.webpage != nil %}
-                                        <a href="{{ item.webpage }}">[{{ item.webpage }}]</a>
-                                        {% endif %}
-
-                                        {% if item.publication_conference_if_published != nil %}
-                                        &mdash; {{ item.publication_conference_if_published }}
-                                        {% endif %}
-                                    </li>
+                                    <li> {% include paperitem.html item=item %} </li>
                                 {% endif %}
                             {% endfor %}
                         </ol>                        

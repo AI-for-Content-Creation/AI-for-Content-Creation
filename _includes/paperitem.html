@@ -1,0 +1,19 @@
+{% assign authors = item.authors | split: "|" %}
+
+{% if item.arXiv != nil %}
+    <a href="{{ item.arXiv }}">{{ item.title }}</a>
+{% else %}
+    {{ item.title }}
+{% endif %}
+<br>
+{% for author in authors %}
+    {{ author }}{% unless forloop.last %},{% endunless %}
+{% endfor %}
+
+{% if item.webpage != nil %}
+    <a href="{{ item.webpage }}">[{{ item.webpage }}]</a>
+{% endif %}
+
+{% if item.publication_conference_if_published != nil %}
+&mdash; {{ item.publication_conference_if_published }}
+{% endif %}
