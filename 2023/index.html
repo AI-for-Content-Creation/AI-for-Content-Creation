@@ -1,0 +1,1986 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link href="css/theme_1610153848925.css" rel="stylesheet"> <!-- Via Themestr.app -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Favicons -->
+    <!-- Sizes from here: https://www.emergeinteractive.com/insights/detail/The-Essentials-of-FavIcons/ -->
+    <link rel="icon" type="image/png" sizes="32x32" href="./images/favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="128x128" href="./images/favicons/favicon-128x128.png">
+    <link rel="icon" type="image/png" sizes="180x180" href="./images/favicons/favicon-180x180.png">
+    <link rel="icon" type="image/png" sizes="192x192" href="./images/favicons/favicon-192x192.png">
+
+    <!-- Twitter Meta Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:site" content="@jtompkin">
+    <meta name="twitter:creator" content="@jtompkin">
+    <meta name="twitter:title" content="AI for Content Creation Workshop @ CVPR">
+    <meta name="twitter:description" content="AI for Content Creation Workshop @ CVPR">
+    <meta name="twitter:image" content="https://www.ai4cc.net/images/twitter-card.jpg">
+
+    <meta property="og:image" content="https://www.ai4cc.net/images/twitter-card.jpg" />
+
+    <style>
+    p {
+        text-align: justify;
+        -webkit-hyphens: auto;
+            -moz-hyphens: auto;
+        hyphens: auto;
+    }
+
+    ol.carousel-indicators li{
+        border: 2px solid black;
+    }
+
+    .carousel-control-prev-icon{
+        border: 2px solid black;
+        background-color: gray;
+    }
+
+    .carousel-control-next-icon{
+        border: 2px solid black;
+        background-color: gray;
+    }
+
+    .carousel-caption h5{
+        border: 2px solid black;
+        background: white;
+        opacity: 80%;
+    }
+
+    .carousel-caption p{
+        border: 2px solid black;
+        background: white;
+        opacity: 80%;
+    }
+
+    .noindent{
+        padding-left: 0;
+    } 
+
+    /* 
+    .brownbrown {
+        color: #4E3629;
+    }
+
+    .brownred {
+        color: #C00404;
+    } */
+
+    .logo {
+        width: 20em;
+        padding: 1em 1em 1em 1em;
+    }
+    </style>
+
+
+  <title>AI4CC 2023</title>
+  </head>
+
+  <body>
+    
+    <header class="bg-light text-dark py-5">
+    <div class="container text-center">
+        <h1>AI for Content Creation Workshop</h1>
+        <h3>@ CVPR 2023</h3>
+        <h4>19th June 2023 &mdash; 9am PDT<br>
+            East Exhibit Hall A, Vancouver Convention Center<br>
+            + <a href="https://cvpr.thecvf.com/virtual/2023/workshop/18467">CVPR Virtual Platform (Zoom link behind login)</a></h4>
+    </div>
+    </header>
+
+    <!-- A grey horizontal navbar that becomes vertical on small screens -->
+    <nav class="navbar sticky-top navbar-expand-sm" style="margin-top:2em; background: #FFF;">
+        <div class="container">
+            <a class="navbar-brand" href="#">AI4CC 2023</a>
+            
+            <ul class="navbar-nav">
+            <li class="nav-item">
+                <a class="nav-link link-primary" href="#summary">Summary</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-primary" href="#awards">Awards</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-primary" href="#schedule">Schedule</a>
+            </li>
+            <!--
+            <li class="nav-item">
+                <a class="nav-link link-primary" href="#papers">Papers</a>
+            </li>
+            -->
+            <li class="nav-item">
+                <a class="nav-link link-primary" href="#submission">Submission</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link link-primary" href="#previousworkshops">Previous Workshops</a>
+            </li>    
+            </ul>
+        </div>
+    </nav>
+
+
+    <div class="container" style="margin-top: 2em">
+        <div id="carouselTop" class="carousel slide" data-ride="carousel">
+            <ol class="carousel-indicators">
+                <li data-target="#carouselTop" data-slide-to="0" class="active"></li>
+                <li data-target="#carouselTop" data-slide-to="1"></li>
+                <li data-target="#carouselTop" data-slide-to="2"></li>
+                <li data-target="#carouselTop" data-slide-to="3"></li>
+                <li data-target="#carouselTop" data-slide-to="4"></li>
+                <li data-target="#carouselTop" data-slide-to="5"></li>
+                <li data-target="#carouselTop" data-slide-to="6"></li>
+                <li data-target="#carouselTop" data-slide-to="7"></li>
+              </ol>
+
+            <div class="carousel-inner text-center">
+                <div class="carousel-item active">
+                    <img height="300px" src="./images/papers/jain_ai4cc2022_dream-fields.jpg" alt="Zero-Shot Text-Guided Object Generation with Dream Fields">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark text-center">Jain et al., AI4CC 2022</h5>
+                        <p class="text-dark text-center">Zero-Shot Text-Guided Object Generation with Dream Fields</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img height="300px" src="./images/papers/lee_ai4cc2022_fix-the-noise.jpg" alt="Fix the Noise: Disentangling Source Feature for Transfer Learning of StyleGAN">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark text-center">Lee, Lee, Kim, Choi, & Kim, AI4CC 2022</h5>
+                        <p class="text-dark text-center">Fix the Noise: Disentangling Source Feature for Transfer Learning of StyleGAN</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item text-center">
+                    <img height="300px" src="./images/papers/jang_ai4cc2022_rics.jpg" alt="RiCS: A 2D Self-Occlusion Map for Harmonizing Volumetric Objects">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark text-center">Jang, Villegas, Yang, Ceylan, Sun, & Lee, AI4CC 2022</h5>
+                        <p class="text-dark text-center">RiCS: A 2D Self-Occlusion Map for Harmonizing Volumetric Objects</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img height="300px" src="./images/papers/poirier-ginter_ai4cc2022_overparameterization.jpg" alt="Overparameterization Improves StyleGAN Inversion">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark text-center">Poirier-Ginter, Alexandre Lessard, Ryan Smith, Jean-François Lalonde, AI4CC 2022</h5>
+                        <p class="text-dark text-center">Overparameterization Improves StyleGAN Inversion</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img height="300px" src="./images/papers/jahn_ai4cc2021_high-res-complex-transformers.jpg" alt="High-Resolution Complex Scene Synthesis with Transformers">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark text-center">Jahn et al., AI4CC 2021</h5>
+                        <p class="text-dark text-center">High-Resolution Complex Scene Synthesis with Transformers</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item text-center">
+                    <img height="300px" src="./images/papers/rombach_ai4cc2020_network-fusion_exemplarguided_crop.jpg" alt="Network Fusion for Content Creation with Conditional INNs">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark text-center">Rombach, Esser, and Ommer, AI4CC 2020</h5>
+                        <p class="text-dark text-center">Network Fusion for Content Creation with Conditional INNs</p>
+                    </div>
+                </div>
+
+                <div class="carousel-item text-center">
+                    <img height="300px" src="./images/papers/Cha_ai4cc2020_few-shot-font-generation.jpg" alt="Toward High-quality Few-shot Font Generation with Dual Memory">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark text-center">Cha et al., AI4CC 2020</h5>
+                        <p class="text-dark text-center">Toward High-quality Few-shot Font Generation with Dual Memory</p>
+                    </div>
+                </div>
+                
+                <div class="carousel-item text-center">
+                    <img height="300px" src="./images/papers/sylvain_ai4cc2020_object-centric_image_generation.jpg" alt="Object-Centric Image Generation from Layouts">
+                    <div class="carousel-caption d-none d-md-block">
+                        <h5 class="text-dark text-center">Sylvain et al., AICC 2020</h5>
+                        <p class="text-dark text-center">Object-Centric Image Generation from Layouts</p>
+                    </div>
+                </div>
+            </div>
+
+            <a class="carousel-control-prev" href="#carouselTop" role="button" data-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="sr-only">Previous</span>
+            </a>
+            <a class="carousel-control-next" href="#carouselTop" role="button" data-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="sr-only">Next</span>
+            </a>
+        </div>
+        <br><br>
+    </div>
+
+
+    <div class="container" id="summary">
+        <h3>Summary</h3>
+        <p>
+        The AI for Content Creation (AI4CC) workshop at CVPR brings together researchers in computer vision, machine learning, and AI. Content creation is required for simulation and training data generation, media like photography and videography, virtual reality and gaming, art and design, and documents and advertising (to name just a few application domains).
+        Recent progress in machine learning, deep learning, and AI techniques has allowed us to turn hours of manual, painstaking content creation work into minutes or seconds of automated or interactive work.
+        For instance, generative adversarial networks (GANs) can produce photorealistic images of 2D and 3D items such as humans, landscapes, interior scenes, virtual environments, or even industrial designs.
+        Neural networks can super-resolve and super-slomo videos, interpolate between photos with intermediate novel views and even extrapolate, and transfer styles to convincingly render and reinterpret content.
+        In addition to creating awe-inspiring artistic images, these offer unique opportunities for generating additional and more diverse training data.
+        Learned priors can also be combined with explicit appearance and geometric constraints, perceptual understanding, or even functional and semantic constraints of objects.
+        </p>
+
+        <p>
+        AI for content creation lies at the intersection of the graphics, the computer vision, and the design community. However, researchers and professionals in these fields may not be aware of its full potential and inner workings. As such, the workshop is comprised of two parts: techniques for content creation and applications for content creation. The workshop has three goals:
+        </p>
+        <ol>
+            <li>To cover introductory concepts to help interested researchers from other fields start in this exciting area.</li>
+            <li>To present success stories to show how deep learning can be used for content creation.</li>
+            <li>To discuss pain points that designers face using content creation tools.</li>
+        </ol>
+        <p>
+        More broadly, we hope that the workshop will serve as a forum to discuss the latest topics in content creation and the challenges that vision and learning researchers can help solve.
+        </p>
+
+        <p>
+        Welcome! - <br>
+
+        
+            
+                <a class="link-primary" href="https://deqings.github.io/">Deqing Sun (Google)</a> <a href="https://twitter.com/DeqingSun"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="https://lingjie0206.github.io/">Lingjie Liu (University of Pennsylvania)</a> <a href="https://twitter.com/LingjieLiu1"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="https://fitsumreda.github.io/">Fitsum Reda (NVIDIA)</a> <a href="https://twitter.com/fitsumreda"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="https://www.linkedin.com/in/huiwen-chang-999962156/">Huiwen Chang (Google)</a> <a href=""><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="http://www.lujiang.info/">Lu Jiang (Google)</a> <a href="https://twitter.com/roadjiang"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="https://seungjunnah.github.io/">Seungjun Nah (NVIDIA)</a> <a href=""><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="https://yijunmaverick.github.io/">Yijun Li (Adobe)</a> <a href=""><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="https://tcwang0509.github.io/">Ting-Chun Wang (NVIDIA)</a> <a href="https://twitter.com/tcwang0509/"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="https://www.cs.cmu.edu/~junyanz/">Jun-Yan Zhu (Carnegie Mellon University)</a> <a href="https://twitter.com/junyanz89/"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+            
+                <a class="link-primary" href="https://www.jamestompkin.com/">James Tompkin (Brown University)</a> <a href="https://twitter.com/jtompkin"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+            
+        
+
+        </p>
+    </div>
+
+    <!--
+    <div class="container" id="speakers">
+        <hr>
+        <h3>Invited Speakers</h3>
+
+        <ul>
+            <li>Ben Mildenhall (Google)</li>
+            <li>Ryan Murdock (Adobe)</li>
+            <li>Angela Dai (TU Munchen)</li>
+            <li>Yuanzhen Li (Google)</li>
+            <li>Jiajun Wu (Stanford)</li>
+            <li>Tim Salimans (Google)</li>
+            <li>Shizhao Sun (Microsoft Research)</li>
+            <li>Special guest panel!</li>
+            <li>Late breaking speakers! TBA </li>
+            <li>Late breaking speakers! TBA </li>
+        </ul>
+    </div>
+    -->
+
+
+    <div class="container text-center">
+        <hr>
+        <img src="images/dall-e2.jpg" height="150px" style="padding: 1em 0em 1em 0em">
+        <img src="images/superslowmo.jpg" height="150px" style="padding: 1em 0em 1em 0em">
+        <!-- <img src="images/dogs.jpg" width=34.5% style="padding: 1em 0em 1em 0em">-->
+        <img src="images/gaugan2.jpg" height="150px" style="padding: 1em 0em 1em 0em">
+        <img src="images/imagen.jpg" height="150px" style="padding: 1em 0em 1em 0em">
+        <br><br>
+        <em>Dall-E 2 (OpenAI, 2022), SuperSlomo (NVIDIA, 2018), GauGAN2 (NVIDIA, 2021), Imagen (Google, 2022).</em>
+    </div>
+
+    <!--
+    <div class="container" id="submission">
+        <hr>
+        <h3>Submission Instructions</h3>
+        <p>
+            We call for papers (8 pages) and extended abstracts (4 pages not including references) to be presented at the AI for Content Creation Workshop at CVPR. Papers and extended abstracts will be peer reviewed in a double blind fashion. Authors of accepted papers will be asked to post their submissions on arXiv. These papers will not be included in the proceedings of CVPR 2023, but authors should be aware that computer vision conferences consider peer-reviewed works with >4-pages to be in violation of double submission policies, e.g., both <a href="https://cvpr.thecvf.com/Conferences/2023/AuthorGuidelines">CVPR</a> and <a href="https://iccv2023.thecvf.com/policies-361500-2-20-15.php">ICCV</a>. We welcome both novel works and works in progress that have not been published elsewhere.
+        </p>
+
+        <p>
+            In the interests of fostering a free exchange of ideas, we will also accept for poster presentation a selection of papers that have been recently published elsewhere, including at CVPR 2023; these will not be peer reviewed again, and are not bound to the same anonymity and page limits. A jury of organizers will select these papers.
+        </p>
+        
+        <p>
+        Paper submissions for 4- and 8-page novel work are <em>double blind</em> and in the <a href="https://media.icml.cc/Conferences/CVPR2023/cvpr2023-author_kit-v1_1-1.zip">CVPR template</a>. There are <em>no dual submissions</em>&mdash;please do not submit work for peer review to two workshops simultaneously.
+        </p>
+
+        <p>
+        Paper submission deadline: March 29th 2023 23:59 US Pacific Time<br>
+        Acceptance notification: ~April 26th 2023<br>
+        Submission Website: <a href="https://openreview.net/group?id=thecvf.com/CVPR/2023/Workshop/AI4CC">OpenReview</a>
+        </p>
+
+        <p>
+        The best student papers will be acknowledged with a prize.
+        </p>
+
+        <p>
+        <em>New for 2023:</em> We have 2x $2,500 travel awards to sponsor under-represented students to attend the workshop. Students will also have an opportunity to interact with invited workshop speakers at a social occasion. <a href="https://forms.gle/dwpvheoSQEXUrGDw8">Apply here.</a>
+        </p>
+
+        <h4>Topics</h4>
+        <p>
+        We seek contributions across content creation, including but not limited to techniques for content creation:
+        </p>
+        <ul>
+            <li>Generative models for image/video/3D synthesis</li>
+            <li>Image/video/3D editing of any kind - inpainting/extrapolation/style</li>
+            <li>Domain transfer, e.g., image-to-image or video-to-video techniques</li>
+            <li>Multi-modal with text, audio, motion, e.g., text-to-image creation</li>
+        </ul>
+        
+        <p>
+        We also seek contributions in domains and applications for content creation:
+        </p>
+        <ul>
+            <li>Image and video synthesis for enthusiast, VFX, architecture, advertisements, art, ...</li>
+            <li>2D/3D graphic design</li>
+            <li>Text and typefaces</li>
+            <li>Design for documents, Web</li>
+            <li>Fashion, garments, and outfits</li>
+            <li>Novel applications and datasets</li>
+        </ul>
+
+        <br><br>
+    </div>
+    -->
+
+    <div class="container" id="awards">
+        <hr>
+        <h3>Awards</h3>
+        <ul>
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li><h5>Best paper</h5> 
+
+
+    <a href="https://arxiv.org/abs/2212.02024">Fine-grained Image Editing by Pixel-wise Guidance Using Diffusion Models</a>
+
+<br>
+
+    Naoki Matsunaga,
+
+    Masato Ishii,
+
+    Akio Hayakawa,
+
+    Kenji Suzuki,
+
+    Takuya Narihira
+
+
+
+
+</li><br>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li><h5>Best paper (runner up)</h5> 
+
+
+    <a href="https://arxiv.org/abs/2305.17489">Text-to-image Editing by Image Information Removal</a>
+
+<br>
+
+    Zhongping Zhang,
+
+    Jian Zheng,
+
+    Jacob Zhiyuan Fang,
+
+    Bryan A. Plummer
+
+
+
+
+</li><br>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+                <li><h5>Best poster</h5> 
+
+
+    <a href="https://arxiv.org/abs/2304.14406">Putting People in Their Place: Affordance-Aware Human Insertion into Scenes</a>
+
+<br>
+
+    Sumith Kulal,
+
+    Tim Brooks,
+
+    Alex Aiken,
+
+    Jiajun Wu,
+
+    Jimei Yang,
+
+    Jingwan Lu,
+
+    Alexei A Efros,
+
+    Krishna Kumar Singh
+
+
+
+    <a href="https://sumith1896.github.io/affordance-insertion/">[https://sumith1896.github.io/affordance-insertion/]</a>
+
+
+
+&mdash; CVPR 2023
+</li>
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+            
+        
+        </ul>
+    </div>
+
+    <div class="container" id="schedule">
+        <hr>
+        <h3>Schedule&mdash;<a href="https://www.youtube.com/watch?v=e-ETzY7qRyQ">Video Recording</a></h3>
+        
+        <div id="videoplayer"></div>
+        <p><em>Click ▶ to jump to each talk!</em></p>
+
+        Morning session:<br>
+        
+
+        <table class="table table-sm table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"><!--Play--></th><th scope="col">Time PDT</th><th scope="col"></td><th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ')">▶</button>
+                    </td>
+                    <td>09:00</td>
+                    <td>Welcome and introductions</td>
+                    <td>👋</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',135)">▶</button>
+                    </td>
+                    <td>09:10</td>
+                    <td><a href="https://bmild.github.io/">Ben Mildenhall (Google) &mdash; neural fields</a></td>
+                    <td>
+                        <!-- Twitter handle -->
+                        <a href="https://twitter.com/BenMildenhall"><img src="images/logos/Twitter_Logo.png" width=18px></a>
+                    </td>                    
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',2628)">▶</button>
+                    </td>
+                    <td>09:40</td>
+                    <td><a href="https://rynmurdock.github.io/">Ryan Murdock &mdash; ML+Art</a></td>
+                    <td>
+                        <!-- Twitter handle -->
+                        <a href="https://twitter.com/@advadnoun"><img src="images/logos/Twitter_Logo.png" width=18px></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>10:10</td>
+                    <td>Coffee break</td>
+                    <td>☕</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',4104)">▶</button>
+                    </td>
+                    <td>10:20</td>
+                    <td><a href="https://www.3dunderstanding.org/">Angela Dai (TU Munich) &mdash; 3D</a></td>
+                    <td><a href="https://twitter.com/angelaqdai"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',5995)">▶</button>
+                    </td>
+                    <td>10:50</td>
+                    <td><a href="https://research.google/people/106222/">Tim Salimans (Google) &mdash; images, video</a></td>
+                    <td><a href="https://twitter.com/timsalimans"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>11:20</td>
+                    <td>Poster session 1 - West Exhibit Hall #93-#107
+                        <!-- In OpenReview submitted order -->
+                        <!-- Papers 
+                        <br><em>Papers</em> -->
+                        <ol class="noindent" start="93">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.04001">AADiff: Audio-Aligned Video Synthesis with Text-to-Image Diffusion</a>
+
+<br>
+
+    Seungwoo Lee,
+
+    Chaerin Kong,
+
+    Donghyeon Jeon,
+
+    Nojun Kwak
+
+
+
+
+ </li>
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2306.00559">We never go out of Style: Motion Disentanglement by Subspace Decomposition of Latent Space</a>
+
+<br>
+
+    Rishubh Parihar,
+
+    Raghav Magazine,
+
+    Piyush Tiwari,
+
+    Venkatesh Babu Radhakrishnan
+
+
+
+
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2304.10701">Matching-based Data Valuation for Generative Model</a>
+
+<br>
+
+    Jiaxi Yang,
+
+    Wenlong Deng,
+
+    Benlin Liu,
+
+    Yangsibo Huang,
+
+    Xiaoxiao Li
+
+
+
+
+ </li>
+                                
+                            
+                        </ol>
+                        
+
+                        <!-- Extended Abstracts
+                        <br><em>Extended Abstracts</em> -->
+                        
+                        
+                        <!-- Accepted at Other Venues
+                        <br><em>Accepted at Other Venues</em> -->
+                        <ol class="noindent" start="96">
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2211.07301">SVS: Adversarial refinement for sparse novel view synthesis</a>
+
+<br>
+
+    Violeta Menendez Gonzalez,
+
+    Andrew Gilbert,
+
+    Graeme Phillipson,
+
+    Stephen Jolly,
+
+    Simon Hadfield
+
+
+
+    <a href="https://bmvc2022.mpi-inf.mpg.de/886/">[https://bmvc2022.mpi-inf.mpg.de/886/]</a>
+
+
+
+&mdash; BMVC 2022
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2211.14305">SpaText: Spatio-Textual Representation for Controllable Image Generation </a>
+
+<br>
+
+    Omri Avrahami,
+
+    Thomas F Hayes,
+
+    Oran Gafni,
+
+    Sonal Gupta,
+
+    Yaniv Taigman,
+
+    Devi Parikh,
+
+    Dani Lischinski,
+
+    Ohad Fried,
+
+    Xi Yin
+
+
+
+    <a href="https://omriavrahami.com/spatext/">[https://omriavrahami.com/spatext/]</a>
+
+
+
+&mdash; CVPR 2023
+ </li>
+                                
+                            
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2212.08311">Can We Find Strong Lottery Tickets in Generative Models?</a>
+
+<br>
+
+    Sangyeop Yeo,
+
+    Yoojin Jang,
+
+    Jy-yong Sohn,
+
+    Dongyoon Han,
+
+    Jaejun Yoo
+
+
+
+
+
+&mdash; AAAI 2023
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2209.00698">Exploring Gradient-based Multi-directional Controls in GANs</a>
+
+<br>
+
+    Zikun Chen,
+
+    Ruowei Jiang,
+
+    Brendan Duke,
+
+    Han Zhao,
+
+    Parham Aarabi
+
+
+
+
+
+&mdash; ECCV2022
+ </li>
+                                
+                            
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2301.02700">3DAvatarGAN: Bridging Domains for Personalized Editable Avatars</a>
+
+<br>
+
+    Rameen Abdal,
+
+    Hsin-Ying Lee,
+
+    Peihao Zhu,
+
+    Menglei Chai,
+
+    Aliaksandr Siarohin,
+
+    Peter Wonka,
+
+    Sergey Tulyakov
+
+
+
+    <a href="https://rameenabdal.github.io/3DAvatarGAN/">[https://rameenabdal.github.io/3DAvatarGAN/]</a>
+
+
+
+&mdash; CVPR 2023
+ </li>
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2304.14406">Putting People in Their Place: Affordance-Aware Human Insertion into Scenes</a>
+
+<br>
+
+    Sumith Kulal,
+
+    Tim Brooks,
+
+    Alex Aiken,
+
+    Jiajun Wu,
+
+    Jimei Yang,
+
+    Jingwan Lu,
+
+    Alexei A Efros,
+
+    Krishna Kumar Singh
+
+
+
+    <a href="https://sumith1896.github.io/affordance-insertion/">[https://sumith1896.github.io/affordance-insertion/]</a>
+
+
+
+&mdash; CVPR 2023
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2206.04382">CLIP-Actor: Text-Driven Recommendation and Stylization for Animating Human Meshes</a>
+
+<br>
+
+    Kim Youwang,
+
+    Kim Ji-Yeon,
+
+    Tae-Hyun Oh
+
+
+
+    <a href="https://clip-actor.github.io/">[https://clip-actor.github.io/]</a>
+
+
+
+&mdash; ECCV 2022
+ </li>
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2303.15108">High-fidelity 3D Human Digitization from Single 2K Resolution Images</a>
+
+<br>
+
+    Sang-Hun Han,
+
+    Min-Gyu Park,
+
+    Ju Hong Yoon,
+
+    Ju-Mi Kang,
+
+    Young-Jae Park,
+
+    Hae-Gon Jeon
+
+
+
+    <a href="https://sanghunhan92.github.io/conference/2K2K/">[https://sanghunhan92.github.io/conference/2K2K/]</a>
+
+
+
+&mdash; CVPR 2023
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2210.00990">Visual prompt tuning for generative transfer learning</a>
+
+<br>
+
+    Kihyuk Sohn,
+
+    Huiwen Chang,
+
+    Jose Lezama,
+
+    Luisa Polania Cabrera,
+
+    Han Zhang,
+
+    Yuan Hao,
+
+    Irfan Essa,
+
+    Lu Jiang
+
+
+
+
+
+&mdash; CVPR 2023
+ </li>
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2303.17490">Sound to Visual Scene Generation by Audio-to-Visual Latent Alignment</a>
+
+<br>
+
+    Kim Sung-Bin,
+
+    Arda Senocak,
+
+    Hyunwoo Ha,
+
+    Andrew Owens,
+
+    Tae-Hyun Oh
+
+
+
+
+
+&mdash; CVPR 2023
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://openreview.net/forum?id=VM8batVBWvg">Discrete Predictor-Corrector Diffusion Models for Image Synthesis</a>
+
+<br>
+
+    Jose Lezama,
+
+    Tim Salimans,
+
+    Lu Jiang,
+
+    Huiwen Chang,
+
+    Jonathan Ho,
+
+    Irfan Essa
+
+
+
+
+
+&mdash; ICLR 2023
+ </li>
+                                
+                            
+                                    
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2112.05112">BLT: Bidirectional Layout Transformer for Controllable Layout Generation</a>
+
+<br>
+
+    Xiang Kong,
+
+    Lu Jiang,
+
+    Huiwen Chang,
+
+    Han Zhang,
+
+    Yuan Hao,
+
+    Haifeng Gong,
+
+    Irfan Essa
+
+
+
+    <a href="https://shawnkx.github.io/blt">[https://shawnkx.github.io/blt]</a>
+
+
+
+&mdash; ECCV 2022
+ </li>
+                                
+                            
+                                
+                            
+                        </ol>
+                    </td>    
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>12:30</td>
+                    <td>Lunch break</td>
+                    <td>🥪</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <br><br>
+        Afternoon session:<br>
+        
+        <table class="table table-sm table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"><!--Play--></th><th scope="col">Time PDT</th><th scope="col"></td><th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',7916)">▶</button>
+                    </td>
+                    <td>13:30</td>
+                    <td>Oral session + best paper announcement
+                        <ul class="noindent">
+                        
+                            
+                        
+                            
+                        
+                            
+                                <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.15779">Custom-Edit: Text-Guided Image Editing with Customized Diffusion Models</a>
+
+<br>
+
+    Jooyoung Choi,
+
+    Yunjey Choi,
+
+    Yunji Kim,
+
+    Junho Kim
+
+
+
+
+ </li>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <li> 
+
+
+    <a href="https://arxiv.org/abs/2212.02024">Fine-grained Image Editing by Pixel-wise Guidance Using Diffusion Models</a>
+
+<br>
+
+    Naoki Matsunaga,
+
+    Masato Ishii,
+
+    Akio Hayakawa,
+
+    Kenji Suzuki,
+
+    Takuya Narihira
+
+
+
+
+ </li>
+                            
+                        
+                            
+                                <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.13460">'Tax-free' 3DMM Conditional Face Generation</a>
+
+<br>
+
+    Nick Huang,
+
+    Zhiqiu Yu,
+
+    Xinjie Yi,
+
+    Yue Wang,
+
+    James Tompkin
+
+
+
+
+ </li>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                                <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.17489">Text-to-image Editing by Image Information Removal</a>
+
+<br>
+
+    Zhongping Zhang,
+
+    Jian Zheng,
+
+    Jacob Zhiyuan Fang,
+
+    Bryan A. Plummer
+
+
+
+
+ </li>
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                            
+                        
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',10134)">▶</button>
+                    </td>
+                    <td>14:00</td>
+                    <td><a href="https://jiajunwu.com/">Jiajun Wu (Stanford University) &mdash; representations</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',11985)">▶</button>
+                    </td>
+                    <td>14:30</td>
+                    <td><a href="https://www.microsoft.com/en-us/research/people/shizsu/publications/">Shizhao Sun (Microsoft) &mdash; design</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>15:00</td>
+                    <td>Coffee break</td>
+                    <td>☕</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',13283)">▶</button>
+                    </td>
+                    <td>15:15</td>
+                    <td><a href="https://people.csail.mit.edu/yzli/">Yuanzhen Li (Google) &mdash; images, video</a></td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',14905)">▶</button>
+                    </td>
+                    <td>15:45</td>
+                    <td><a href="https://xingangpan.github.io/">Xingang Pan (NTU)</a> &mdash; <a href="https://vcai.mpi-inf.mpg.de/projects/DragGAN/">DragGAN</a> &mdash; late breaking speaker!</td>
+                    <td>🦜</td>
+                </tr>
+                <tr>
+                    <td>
+                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',16930)">▶</button>
+                    </td>
+                    <td>16:15</td>
+                    <td>Panel discussion &mdash; <em>AI Hopes and Fears for Practical Content Creation</em>
+                        <ul class="noindent">
+                        
+                        <li>
+                            <a href="https://www.linkedin.com/in/larrygritz/">Larry Gritz</a>
+                            <br>
+                            Distinguished Engineer, Sony Pictures Imageworks
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.linkedin.com/in/carl-jarrett-6979856/">Carl Jarrett</a>
+                            <br>
+                            Senior Art Director, Electronic Arts (EA)
+                        </li>
+                        
+                        <li>
+                            <a href="https://www.linkedin.com/in/darylanselmo/">Daryl Anselmo</a>
+                            <br>
+                            Art Director / Visual Artist, 'On sabbatical' (previously Midwinter)
+                        </li>
+                        
+                        </ul>
+                    </td>
+                    <td>🗣️</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td></td>
+                    <td>17:15</td>
+                    <td>Poster session 2 - West Exhibit Hall #94-#107
+                        <!-- In OpenReview submitted order -->
+                        <!-- Papers 
+                        <br><em>Papers</em> -->
+                        <ol class="noindent" start="94">
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2201.04851">MetaDance: Few-shot Dancing Video Retargeting via Temporal-aware Meta-learning</a>
+
+<br>
+
+    Yuying Ge,
+
+    Ruimao Zhang,
+
+    Yibing Song
+
+
+
+
+ </li>
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.15779">Custom-Edit: Text-Guided Image Editing with Customized Diffusion Models</a>
+
+<br>
+
+    Jooyoung Choi,
+
+    Yunjey Choi,
+
+    Yunji Kim,
+
+    Junho Kim
+
+
+
+
+ </li>
+                                
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2110.13107">The Nuts and Bolts of Adopting Transformer in GANs</a>
+
+<br>
+
+    Rui Xu,
+
+    Xiangyu Xu,
+
+    Kai Chen,
+
+    Bolei Zhou,
+
+    Chen Change Loy
+
+
+
+
+ </li>
+                                
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.10456">LPMM : Intuitive Pose Control for Neural Talking-Head Model via Landmark-Parameter Morphable Model </a>
+
+<br>
+
+    Kwangho Lee,
+
+    Patrick Kwon,
+
+    Myung Ki Lee,
+
+    Namhyuk Ahn,
+
+    Junsoo Lee
+
+
+
+    <a href="https://khlee369.github.io/LPMM/">[https://khlee369.github.io/LPMM/]</a>
+
+
+ </li>
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2302.08908">LayoutDiffuse: Adapting Foundational Diffusion Models for Layout-to-Image Generation</a>
+
+<br>
+
+    Jiaxin Cheng,
+
+    Xiao Liang,
+
+    Xingjian Shi,
+
+    Tong He,
+
+    Tianjun Xiao,
+
+    Mu Li
+
+
+
+    <a href="https://github.com/cplusx/layout_diffuse">[https://github.com/cplusx/layout_diffuse]</a>
+
+
+ </li>
+                                
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2304.09748">Reference-based Image Composition with Sketch via Structure-aware Diffusion Model</a>
+
+<br>
+
+    Kangyeol Kim,
+
+    Sunghyun Park,
+
+    Junsoo Lee,
+
+    Jaegul Choo
+
+
+
+    <a href="https://github.com/kangyeolk/Paint-by-Sketch">[https://github.com/kangyeolk/Paint-by-Sketch]</a>
+
+
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2306.00241">Balancing Reconstruction and Editing Quality of GAN Inversion for Real Image Editing with StyleGAN Prior Latent Space</a>
+
+<br>
+
+    Kai Katsumata,
+
+    MinhDuc Vo,
+
+    Bei Liu,
+
+    Hideki Nakayama
+
+
+
+
+ </li>
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2212.02024">Fine-grained Image Editing by Pixel-wise Guidance Using Diffusion Models</a>
+
+<br>
+
+    Naoki Matsunaga,
+
+    Masato Ishii,
+
+    Akio Hayakawa,
+
+    Kenji Suzuki,
+
+    Takuya Narihira
+
+
+
+
+ </li>
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.13460">'Tax-free' 3DMM Conditional Face Generation</a>
+
+<br>
+
+    Nick Huang,
+
+    Zhiqiu Yu,
+
+    Xinjie Yi,
+
+    Yue Wang,
+
+    James Tompkin
+
+
+
+
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2210.12350">Instance-Aware Image Completion</a>
+
+<br>
+
+    Jinoh Cho,
+
+    Minguk Kang,
+
+    Vibhav Vineet,
+
+    Jaesik Park
+
+
+
+
+ </li>
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.19135">Context-Preserving Two-Stage Video Domain Translation for Portrait Stylization</a>
+
+<br>
+
+    Doyeon Kim,
+
+    Eunji Ko,
+
+    Hyunsu Kim,
+
+    Yunji Kim,
+
+    Junho Kim,
+
+    Dongchan Min,
+
+    Junmo Kim,
+
+    Sung Ju Hwang
+
+
+
+
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2209.01470">Neural Sign Reenactor: Deep Photorealistic Sign Language Retargeting</a>
+
+<br>
+
+    Christina Ourania Tze,
+
+    Panagiotis Filntisis,
+
+    Athanasia-Lida Dimou,
+
+    Anastasios Roussos,
+
+    Petros Maragos
+
+
+
+
+ </li>
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="http://arxiv.org/abs/2306.07596">Paste and Harmonize via Denoising: Towards Controllable Exemplar-based Image Editing</a>
+
+<br>
+
+    Xin Zhang,
+
+    Jiaxian Guo,
+
+    Paul Yoo,
+
+    Yutaka Matsuo,
+
+    Yusuke Iwasawa
+
+
+
+    <a href="https://sites.google.com/view/phd-demo-page">[https://sites.google.com/view/phd-demo-page]</a>
+
+
+ </li>
+                                
+                            
+                                
+                                    <li> 
+
+
+    <a href="https://arxiv.org/abs/2305.17489">Text-to-image Editing by Image Information Removal</a>
+
+<br>
+
+    Zhongping Zhang,
+
+    Jian Zheng,
+
+    Jacob Zhiyuan Fang,
+
+    Bryan A. Plummer
+
+
+
+
+ </li>
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                        </ol>
+                        
+
+                        <!-- Extended Abstracts
+                        <br><em>Extended Abstracts</em> -->
+                        
+                        
+                        <!-- Accepted at Other Venues
+                        <br><em>Accepted at Other Venues</em> -->
+                        <ol class="noindent" start="93">
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                                
+                            
+                        </ol>                        
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+
+    <div class="container" id="previousworkshops">
+        <hr>    
+        <h3>Previous Workshops (including session videos)</h3>
+        <ul>
+            <li>2022 - <a href="https://www.ai4cc.net/2022/">AI for Content Creation</a> (Workshop at CVPR 2022).</li>
+            <li>2021 - <a href="https://www.ai4cc.net/2021/">AI for Content Creation</a> (Workshop at CVPR 2021).</li>
+            <li>2020 - <a href="https://www.ai4cc.net/2020/">AI for Content Creation</a> (Workshop at CVPR 2020).</li>
+            <li>2019 - <a href="https://nvlabs.github.io/dl-for-content-creation/">Deep Learning for Content Creation</a> (Tutorial at CVPR 2019)</li>
+        </ul>
+        <br><br>
+    </div>
+
+    <footer class="bg-light text-dark py-5">
+        <div class="container">
+            <img src="images/logos/google_logo_tp.png" class="logo">
+            <img src="images/logos/brown-cs-logo.png" class="logo">
+            <img src="images/logos/NVIDIALogo_2D.png" class="logo">
+            <img src="images/logos/Adobe-Logo.png" class="logo">
+            <img src="images/logos/cmu.png" class="logo">
+            <img src="images/logos/upenn.png" class="logo">
+
+            <p>
+                Thank you to <a href="http://themestr.app">Themestr.app</a> and <a href="http://getbootstrap.com">Bootstrap</a> for the Webpage design tools.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Javascript to control YouTube player-->
+    <script>
+        // From https://developers.google.com/youtube/iframe_api_reference
+        document.addEventListener("DOMContentLoaded", function(event) {
+            var tag = document.createElement('script');
+            tag.src = "https://www.youtube.com/iframe_api";
+            var firstScriptTag = document.getElementsByTagName('script')[0];
+            firstScriptTag.parentNode.insertBefore(tag, firstScriptTag);
+        });
+
+        var videoplayer;
+        function onYouTubeIframeAPIReady() {
+            videoplayer = new YT.Player('videoplayer', {width: '800', height: '450', videoId: 'A1yFak2TYTQ'});
+        }
+    </script>
+    
+  </body>
+</html>

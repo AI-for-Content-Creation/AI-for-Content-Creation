@@ -4,14 +4,31 @@
         "affiliation": "Google",
         "webpage": "https://deqings.github.io/",
         "twitter": "https://twitter.com/DeqingSun",
-        "years": [2023,2022,2021,2020,2019]
+        "years": [2024,2023,2022,2021,2020,2019]
     },
     {
         "name": "Lingjie Liu",
+        "position": "Assistant Professor",
         "affiliation": "University of Pennsylvania",
         "webpage": "https://lingjie0206.github.io/",
         "twitter": "https://twitter.com/LingjieLiu1",
-        "years": [2023]
+        "years": [2024,2023]
+    },    
+    {
+        "name": "Yuanzhen Li",
+        "position": "Principal Research Scientist",
+        "affiliation": "Google",
+        "webpage": "https://people.csail.mit.edu/yzli/",
+        "twitter": "",
+        "years": [2024]
+    },
+    {
+        "name": "Sergey Tulyakov",
+        "position": "Principal Research Scientist",
+        "affiliation": "Snap",
+        "webpage": "http://www.stulyakov.com/",
+        "twitter": "https://twitter.com/SergeyTulyakov",
+        "years": [2024]
     },
     {
         "name": "Fitsum Reda",
@@ -25,14 +42,14 @@
         "affiliation": "Google",
         "webpage": "https://www.linkedin.com/in/huiwen-chang-999962156/",
         "twitter": "",
-        "years": [2023,2022]
+        "years": [2024,2023,2022]
     },
     {
         "name": "Lu Jiang",
         "affiliation": "Google",
         "webpage": "http://www.lujiang.info/",
         "twitter": "https://twitter.com/roadjiang",
-        "years": [2023,2022,2021,2020]
+        "years": [2024,2023,2022,2021,2020]
     },
     {
         "name": "Seungjun Nah",
@@ -46,7 +63,7 @@
         "name": "Yijun Li",
         "affiliation": "Adobe",
         "twitter": "",
-        "years": [2023]
+        "years": [2024,2023]
     },
     {
         "name": "Ting-Chun Wang",
@@ -57,16 +74,18 @@
     },
     {
         "name": "Jun-Yan Zhu",
+        "position": "Assistant Professor",
         "affiliation": "Carnegie Mellon University",
         "webpage": "https://www.cs.cmu.edu/~junyanz/",
         "twitter": "https://twitter.com/junyanz89/",
-        "years": [2023,2022]
+        "years": [2024,2023,2022]
     },
     {
         "name": "James Tompkin",
+        "position": "Assistant Professor",
         "affiliation": "Brown University",
         "webpage": "https://www.jamestompkin.com/",
         "twitter": "https://twitter.com/jtompkin",
-        "years": [2023,2022,2021,2020] 
+        "years": [2024,2023,2022,2021,2020] 
     }
 ]
