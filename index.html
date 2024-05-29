@@ -97,7 +97,7 @@
         <h1>AI for Content Creation Workshop</h1>
         <h3>@ CVPR 2024</h3>
         <h4>Mon 17th June 2024 &mdash; 9am PDT<br>
-            Seattle Convention Center
+            Seattle Convention Center &mdash; Summit 342
             <!--+ <br><a href="https://cvpr.thecvf.com/virtual/2023/workshop/18467">CVPR Virtual Platform (Zoom link behind login)</a>-->
         </h4>
     </div>
@@ -112,17 +112,18 @@
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#summary">Summary</a>
             </li>
+            <!--
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#awards">Awards</a>
             </li>
+            -->
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#schedule">Schedule</a>
             </li>
-            <!--
+            
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#papers">Papers</a>
             </li>
-            -->
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#submission">Submission</a>
             </li>
@@ -270,13 +271,27 @@
 
         {% for item in site.data.organizers %}
             {% if item.years contains 2024 %}
-                <a class="link-primary" href="{{ item.webpage }}">{{ item.name }} ({{ item.affiliation }})</a> <a href="{{ item.twitter }}"><img src="images/logos/Twitter_Logo.png" width=18px></a> <br>        
+                <a class="link-primary" href="{{ item.webpage }}">{{ item.name }} ({{ item.affiliation }})</a> 
+                {% if item.mastodon %}
+                <a href="{{ item.mastodon }}"><img src="images/logos/mastodon_logo.svg" width=18px></a> 
+                {% endif %}
+                {% if item.bluesky %}
+                <a href="{{ item.bluesky }}"><img src="images/logos/Bluesky_Logo.svg" width=18px></a> 
+                {% endif %}
+                {% if item.twitter %}
+                <a href="{{ item.twitter }}"><img src="images/logos/X_logo_black.svg" width=18px></a> 
+                {% endif %}
+                {% if item.threads %}
+                <a href="{{ item.threads }}"><img src="images/logos/Threads_logo.svg" width=18px></a> 
+                {% endif %}
+                <br>        
             {% endif %}
         {% endfor %}
 
         </p>
     </div>
 
+    <!--
     <div class="container" id="speakers">
         <hr>
         <h3>2024 Tentative Speakers</h3>
@@ -293,6 +308,7 @@
             <li>Late breaking speakers! TBA </li>
         </ul>
     </div>
+    -->
 
     <div class="container text-center">
         <hr>
@@ -305,6 +321,7 @@
         <em>Dall-E 2 (OpenAI, 2022), SuperSlomo (NVIDIA, 2018), GauGAN2 (NVIDIA, 2021), Imagen (Google, 2022).</em>
     </div>
 
+    <!--
     <div class="container" id="submission">
         <hr>
         <h3>Submission Instructions</h3>
@@ -364,40 +381,48 @@
 
         <br><br>
     </div>
+    -->
 
+    <!--
     <div class="container">
         <hr>
-        <h1>2023</h1>
+        <h1>2024</h1>
     </div>
+    -->
 
+    <!--
     <div class="container" id="awards">
         <hr>
         <h3>Awards</h3>
         <ul>
-        {% for item in site.data.papers_2023 %}
+        {% for item in site.data.papers_2024 %}
             {% if item.award == "bestpaper" %}
                 <li><h5>Best paper</h5> {% include paperitem.html item=item %}</li><br>
             {% endif %}
         {% endfor %}
-        {% for item in site.data.papers_2023 %}
+        {% for item in site.data.papers_2024 %}
             {% if item.award == "bestpaperrunnerup" %}
                 <li><h5>Best paper (runner up)</h5> {% include paperitem.html item=item %}</li><br>
             {% endif %}
         {% endfor %}
-        {% for item in site.data.papers_2023 %}
+        {% for item in site.data.papers_2024 %}
             {% if item.award == "bestposter" %}
                 <li><h5>Best poster</h5> {% include paperitem.html item=item %}</li>
             {% endif %}
         {% endfor %}
         </ul>
     </div>
+    -->
 
     <div class="container" id="schedule">
         <hr>
-        <h3>2023 Schedule&mdash;<a href="https://youtu.be/e-ETzY7qRyQ">Video Recording</a></h3>
+        <h3>2024 Schedule</h3>
+        
+        <!--<h3>2024 Schedule&mdash;<a href="Coming Soon">Video Recording</a></h3>
         
         <div id="videoplayer"></div>
         <p><em>Click ▶ to jump to each talk!</em></p>
+        -->
 
         Morning session:<br>
         
@@ -405,38 +430,40 @@
         <table class="table table-sm table-striped">
             <thead>
                 <tr>
-                    <th scope="col"><!--Play--></th><th scope="col">Time PDT</th><th scope="col"></td><th scope="col"></th>
+                    <th scope="col" style="width:2%"><!--Play--></th>
+                    <th scope="col" style="width:5%">Time PDT</th>
+                    <th scope="col" style="width:83%"></th>
+                    <th scope="col" style="width:10%"></th>
                 </tr>
             </thead>
             <tbody>
                 <tr>
                     <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ')">▶</button>
+                        <!--<button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ')">▶</button>-->
                     </td>
                     <td>09:00</td>
                     <td>Welcome and introductions</td>
                     <td>👋</td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',135)">▶</button>
-                    </td>
+                    <td></td>
                     <td>09:10</td>
-                    <td><a href="https://bmild.github.io/">Ben Mildenhall (Google) &mdash; neural fields</a></td>
+                    <td><a href="https://www.weizmann.ac.il/math/dekel/home">Tali Dekel (Weizmann Institute)</a></td>
                     <td>
                         <!-- Twitter handle -->
-                        <a href="https://twitter.com/BenMildenhall"><img src="images/logos/Twitter_Logo.png" width=18px></a>
+                        <a href="https://x.com/talidekel"><img src="images/logos/X_logo_black.svg" width=18px></a>
                     </td>                    
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',2628)">▶</button>
-                    </td>
+                    <td></td>
                     <td>09:40</td>
-                    <td><a href="https://rynmurdock.github.io/">Ryan Murdock &mdash; ML+Art</a></td>
+                    <td><a href="https://www.dgp.toronto.edu/~hertzman/">Aaron Hertzmann (Adobe)</a></td>
                     <td>
-                        <!-- Twitter handle -->
-                        <a href="https://twitter.com/@advadnoun"><img src="images/logos/Twitter_Logo.png" width=18px></a>
+                        <!-- Social handles -->
+                        <a href="https://fediscience.org/@aaronhertzmann"><img src="images/logos/mastodon_logo.svg" width=18px></a>
+                        <a href="https://bsky.app/profile/aaronhertzmann.bsky.social"><img src="images/logos/Bluesky_Logo.svg" width=18px></a>
+                        <a href="https://twitter.com/@AaronHertzmann"><img src="images/logos/X_logo_black.svg" width=18px></a>
+                        <a href="https://www.threads.net/@aaronhertzmann"><img src="images/logos/Threads_logo.svg" width=18px></a>
                     </td>
                 </tr>
                 <tr>
@@ -446,30 +473,26 @@
                     <td>☕</td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',4104)">▶</button>
-                    </td>
+                    <td></td>
                     <td>10:20</td>
-                    <td><a href="https://www.3dunderstanding.org/">Angela Dai (TU Munich) &mdash; 3D</a></td>
-                    <td><a href="https://twitter.com/angelaqdai"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                    <td><a href="https://www.openai.com/sora">Bill Peebles & Tim Brooks (OpenAI) &mdash; Sora</a></td>
+                    <td><a href="https://twitter.com/_tim_brooks"><img src="images/logos/X_logo_black.svg" width=18px></a></td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',5995)">▶</button>
-                    </td>
+                    <td></td>
                     <td>10:50</td>
-                    <td><a href="https://research.google/people/106222/">Tim Salimans (Google) &mdash; images, video</a></td>
-                    <td><a href="https://twitter.com/timsalimans"><img src="images/logos/Twitter_Logo.png" width=18px></a></td>
+                    <td><a href="https://cs.stanford.edu/~diyiy/">Diyi Yang (Stanford)</a></td>
+                    <td></td>
                 </tr>
                 <tr>
                     <td></td>
                     <td>11:20</td>
-                    <td>Poster session 1 - West Exhibit Hall #93-#107
+                    <td>Poster session 1 - Arch Building Exhibit Hall
                         <!-- In OpenReview submitted order -->
                         <!-- Papers 
                         <br><em>Papers</em> -->
-                        <ol class="noindent" start="93">
-                            {% for item in site.data.papers_2023 %}
+                        <ol class="noindent" start="1">
+                            {% for item in site.data.papers_2024 %}
                                 {% if item.poster_session == '1' and item.accepted_elsewhere == 'No' %}
                                     <li> {% include paperitem.html item=item %} </li>
                                 {% endif %}
@@ -483,8 +506,8 @@
                         
                         <!-- Accepted at Other Venues
                         <br><em>Accepted at Other Venues</em> -->
-                        <ol class="noindent" start="96">
-                            {% for item in site.data.papers_2023 %}
+                        <ol class="noindent" start="19">
+                            {% for item in site.data.papers_2024 %}
                                 {% if item.poster_session == '1' and item.accepted_elsewhere == 'Yes' %}    
                                     <li> {% include paperitem.html item=item %} </li>
                                 {% endif %}
@@ -514,36 +537,32 @@
             </thead>
             <tbody>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',7916)">▶</button>
-                    </td>
+                    <td></td>
                     <td>13:30</td>
                     <td>Oral session + best paper announcement
+                        <!--
                         <ul class="noindent">
-                        {% for item in site.data.papers_2023 %}
+                        {% for item in site.data.papers_2024 %}
                             {% if item.decision == 'Accept (Oral)' %}
                                 <li> {% include paperitem.html item=item %} </li>
                             {% endif %}
                         {% endfor %}
                         </ul>
+                        -->
                     </td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',10134)">▶</button>
-                    </td>
+                    <td></td>
                     <td>14:00</td>
-                    <td><a href="https://jiajunwu.com/">Jiajun Wu (Stanford University) &mdash; representations</a></td>
+                    <td><a href="https://scholar.google.com/citations?user=ygdQhrIAAAAJ/">Robin Rombach</a> <s><a href="https://sifted.eu/articles/stability-ai-rombach-news">(Stability AI)</a></s></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',11985)">▶</button>
-                    </td>
-                    <td>14:30</td>
-                    <td><a href="https://www.microsoft.com/en-us/research/people/shizsu/publications/">Shizhao Sun (Microsoft) &mdash; design</a></td>
                     <td></td>
+                    <td>14:30</td>
+                    <td><a href="https://liuziwei7.github.io/">Ziwei Liu (Nanyang Technological University)</a></td>
+                    <td><a href="https://twitter.com/liuziwei7"><img src="images/logos/X_logo_black.svg" width=18px></a></td>
                 </tr>
                 <tr>
                     <td></td>
@@ -552,29 +571,25 @@
                     <td>☕</td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',13283)">▶</button>
-                    </td>
+                    <td></td>
                     <td>15:15</td>
-                    <td><a href="https://people.csail.mit.edu/yzli/">Yuanzhen Li (Google) &mdash; images, video</a></td>
+                    <td><a href="Coming Soon">TBD</a></td>
                     <td></td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',14905)">▶</button>
-                    </td>
+                    <td></td>
                     <td>15:45</td>
-                    <td><a href="https://xingangpan.github.io/">Xingang Pan (NTU)</a> &mdash; <a href="https://vcai.mpi-inf.mpg.de/projects/DragGAN/">DragGAN</a> &mdash; late breaking speaker!</td>
-                    <td>🦜</td>
+                    <td><a href="https://www.cs.cornell.edu/~snavely/">Noah Snavely (Cornell / Google)</a></td>
+                    <td><a href="https://twitter.com/Jimantha"><img src="images/logos/X_logo_black.svg" width=18px></a></td>
                 </tr>
                 <tr>
-                    <td>
-                        <button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ',16930)">▶</button>
-                    </td>
+                    <td></td>
                     <td>16:15</td>
+                    <td>Panel discussion &mdash; to be announced.
+                    <!--
                     <td>Panel discussion &mdash; <em>AI Hopes and Fears for Practical Content Creation</em>
                         <ul class="noindent">
-                        {% for panelist in site.data.panelists_2023 %}
+                        {% for panelist in site.data.panelists_2024 %}
                         <li>
                             <a href="{{ panelist.webpage }}">{{ panelist.name }}</a>
                             <br>
@@ -582,6 +597,7 @@
                         </li>
                         {% endfor %}
                         </ul>
+                    -->
                     </td>
                     <td>🗣️</td>
                 </tr>
@@ -589,12 +605,12 @@
                 <tr>
                     <td></td>
                     <td>17:15</td>
-                    <td>Poster session 2 - West Exhibit Hall #94-#107
+                    <td>Poster session 2 - Arch Building Exhibit Hall
                         <!-- In OpenReview submitted order -->
                         <!-- Papers 
                         <br><em>Papers</em> -->
-                        <ol class="noindent" start="94">
-                            {% for item in site.data.papers_2023 %}
+                        <ol class="noindent" start="1">
+                            {% for item in site.data.papers_2024 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'No' %}
                                     <li> {% include paperitem.html item=item %} </li>
                                 {% endif %}
@@ -608,8 +624,8 @@
                         
                         <!-- Accepted at Other Venues
                         <br><em>Accepted at Other Venues</em> -->
-                        <ol class="noindent" start="93">
-                            {% for item in site.data.papers_2023 %}
+                        <ol class="noindent" start="19">
+                            {% for item in site.data.papers_2024 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'Yes' %}
                                     <li> {% include paperitem.html item=item %} </li>
                                 {% endif %}
@@ -663,7 +679,7 @@
 
         var videoplayer;
         function onYouTubeIframeAPIReady() {
-            videoplayer = new YT.Player('videoplayer', {width: '800', height: '450', videoId: 'e-ETzY7qRyQ'});
+            videoplayer = new YT.Player('videoplayer', {width: '800', height: '450', videoId: ''});
         }
     </script>
     
