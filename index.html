@@ -506,7 +506,7 @@
                         
                         <!-- Accepted at Other Venues
                         <br><em>Accepted at Other Venues</em> -->
-                        <ol class="noindent" start="19">
+                        <ol class="noindent" start="14">
                             {% for item in site.data.papers_2024 %}
                                 {% if item.poster_session == '1' and item.accepted_elsewhere == 'Yes' %}    
                                     <li> {% include paperitem.html item=item %} </li>
@@ -624,7 +624,7 @@
                         
                         <!-- Accepted at Other Venues
                         <br><em>Accepted at Other Venues</em> -->
-                        <ol class="noindent" start="19">
+                        <ol class="noindent" start="14">
                             {% for item in site.data.papers_2024 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'Yes' %}
                                     <li> {% include paperitem.html item=item %} </li>
