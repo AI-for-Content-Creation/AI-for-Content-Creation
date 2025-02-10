@@ -1,6 +1,3 @@
----
----
-
 <!doctype html>
 <html lang="en">
   <head>
@@ -22,14 +19,6 @@
     <link rel="icon" type="image/png" sizes="128x128" href="./images/favicons/favicon-128x128.png">
     <link rel="icon" type="image/png" sizes="180x180" href="./images/favicons/favicon-180x180.png">
     <link rel="icon" type="image/png" sizes="192x192" href="./images/favicons/favicon-192x192.png">
-
-    <!-- Twitter Meta Card -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:site" content="@jtompkin">
-    <meta name="twitter:creator" content="@jtompkin">
-    <meta name="twitter:title" content="AI for Content Creation Workshop @ CVPR">
-    <meta name="twitter:description" content="AI for Content Creation Workshop @ CVPR">
-    <meta name="twitter:image" content="https://www.ai4cc.net/images/twitter-card.jpg">
 
     <meta property="og:image" content="https://www.ai4cc.net/images/twitter-card.jpg" />
 
@@ -95,18 +84,15 @@
     <header class="bg-light text-dark py-5">
     <div class="container text-center">
         <h1>AI for Content Creation Workshop</h1>
-        <h3>@ CVPR 2024</h3>
-        <h4>Mon 17th June 2024 &mdash; 9am PDT<br>
-            Seattle Convention Center &mdash; Summit 342
-            <!--+ <br><a href="https://cvpr.thecvf.com/virtual/2023/workshop/18467">CVPR Virtual Platform (Zoom link behind login)</a>-->
-        </h4>
+        <h3>@ CVPR 2025</h3>
+        <h4>Music City Center, Nashville, TN, USA</h4>
     </div>
     </header>
 
     <!-- A grey horizontal navbar that becomes vertical on small screens -->
     <nav class="navbar sticky-top navbar-expand-sm" style="margin-top:2em; background: #FFF;">
         <div class="container">
-            <a class="navbar-brand" href="#">AI4CC 2024</a>
+            <a class="navbar-brand" href="#">AI4CC 2025</a>
             
             <ul class="navbar-nav">
             <li class="nav-item">
@@ -270,7 +256,7 @@
         Welcome! - <br>
 
         {% for item in site.data.organizers %}
-            {% if item.years contains 2024 %}
+            {% if item.years contains 2025 %}
                 <a class="link-primary" href="{{ item.webpage }}">{{ item.name }} ({{ item.affiliation }})</a> 
                 {% if item.mastodon %}
                 <a href="{{ item.mastodon }}"><img src="images/logos/mastodon_logo.svg" width=18px></a> 
@@ -291,70 +277,70 @@
         </p>
     </div>
 
-    <!--
     <div class="container" id="speakers">
         <hr>
-        <h3>2024 Tentative Speakers</h3>
+        <h3>2025 Tentative Speakers</h3>
 
         <ul>
-            <li>Aaron Hertzmann (Adobe)</li>
-            <li>Ziwei Liu (Nanyang Technological University)</li>
-            <li>Robin Rombach (Stability AI)</li>
-            <li>Tali Dekel (Weizmann Institute)</li>
-            <li>Noah Snavely (Cornell / Google)</li>
-            <li>Diyi Yang (Stanford)</li>
+            <li>Maneesh Agrawala (Stanford)</li>
+            <li>Nanxuan (Cherry) Zhao (Adobe)</li>
+            <li>Christian Theobalt (MPI Informatik)</li>
+            <li>Yutong Bai (UC Berkeley)</li>
+            <li>Rohit Girdhar & Ishan Misra (Meta Movie Gen)</li>
+            <li>Kai Zhang (Adobe)</li>
             <li>Special guest panel!</li>
-            <li>Late breaking speakers! TBA </li>
             <li>Late breaking speakers! TBA </li>
         </ul>
     </div>
-    -->
+
 
     <div class="container text-center">
         <hr>
         <img src="images/dall-e2.jpg" height="150px" style="padding: 1em 0em 1em 0em">
-        <img src="images/superslowmo.jpg" height="150px" style="padding: 1em 0em 1em 0em">
+        <!-- <img src="images/superslowmo.jpg" height="150px" style="padding: 1em 0em 1em 0em">-->
         <!-- <img src="images/dogs.jpg" width=34.5% style="padding: 1em 0em 1em 0em">-->
         <img src="images/gaugan2.jpg" height="150px" style="padding: 1em 0em 1em 0em">
         <img src="images/imagen.jpg" height="150px" style="padding: 1em 0em 1em 0em">
         <br><br>
-        <em>Dall-E 2 (OpenAI, 2022), SuperSlomo (NVIDIA, 2018), GauGAN2 (NVIDIA, 2021), Imagen (Google, 2022).</em>
+        <em>Dall-E 2 (OpenAI, 2022), GauGAN2 (NVIDIA, 2021), Imagen (Google, 2022).</em>
     </div>
 
-    <!--
+
     <div class="container" id="submission">
         <hr>
         <h3>Submission Instructions</h3>
         <p>
-            We call for papers (8 pages not including references) and extended abstracts (4 pages not including references) to be presented at the AI for Content Creation Workshop at CVPR. Papers and extended abstracts will be peer reviewed in a double blind fashion. Authors of accepted papers will be asked to post their submissions on arXiv. These papers will not be included in the proceedings of CVPR, but authors should be aware that computer vision conferences consider peer-reviewed works with >4-pages to be in violation of double submission policies, e.g., both <a href="https://cvpr.thecvf.com/Conferences/2024/AuthorGuidelines">CVPR</a> and <a href="https://eccv2024.ecva.net/Conferences/2024/SubmissionPolicies">ECCV</a>. We welcome both novel works and works in progress that have not been published elsewhere.
+            We call for papers (8 pages not including references) and extended abstracts (4 pages not including references) to be presented at the AI for Content Creation Workshop at CVPR. Papers and extended abstracts will be peer reviewed in a double blind fashion. Authors of accepted papers will be asked to post their submissions on arXiv. These papers will not be included in the proceedings of CVPR, but authors should be aware that computer vision conferences consider peer-reviewed works with >4-pages to be in violation of double submission policies, e.g., both <a href="https://cvpr.thecvf.com/Conferences/2025/AuthorGuidelines">CVPR</a> and <a href="https://eccv2024.ecva.net/Conferences/2024/SubmissionPolicies">ECCV</a>. We welcome both novel works and works in progress that have not been published elsewhere.
         </p>
 
         <p>
-            In the interests of fostering a free exchange of ideas, we will also accept for poster presentation a selection of papers that have been recently published elsewhere, including at CVPR 2024; these will not be peer reviewed again, and are not bound to the same anonymity and page limits. A jury of organizers will select these papers.
+            In the interests of fostering a free exchange of ideas, we will also accept for poster presentation a selection of papers that have been recently published elsewhere, including at CVPR 2025; these will not be peer reviewed again, and are not bound to the same anonymity and page limits. A jury of organizers will select these papers.
         </p>
         
         <p>
-        Paper submissions for 4- and 8-page novel work are <em>double blind</em> and in the <a href="https://media.icml.cc/Conferences/CVPR2023/cvpr2023-author_kit-v1_1-1.zip">CVPR template</a>. You are welcome to include appendices in the main PDF, and upload supplemental material such as videos. There are <em>no dual submissions</em>&mdash;please do not submit work for peer review to two workshops simultaneously.
+        Paper submissions for 4- and 8-page novel work are <em>double blind</em> and in the <a href="https://github.com/cvpr-org/author-kit/">CVPR template</a>. You are welcome to include appendices in the main PDF, and upload supplemental material such as videos. There are <em>no dual submissions</em>&mdash;please do not submit work for peer review to two workshops simultaneously.
         </p>
 
         <p>
-        Paper submission deadline: March 21st 2024 23:59 US Pacific Time (PDT)<br>
-        Acceptance notification: ~April 26th 2024<br>
-        Submission Website: <a href="https://openreview.net/group?id=thecvf.com/CVPR/2024/Workshop/AI4CC">OpenReview</a>
+        Paper submission deadline: TBD March 2025<br>
+        Acceptance notification: TBD April 2025<br>
+        Submission Website: TBD
         </p>
 
         <p>
         The best student papers will be acknowledged with a prize.
         </p>
 
+        <!--
         <p>
         <em>Reviewing:</em> We accept self-nominations for reviewers: <a href="https://docs.google.com/forms/d/e/1FAIpQLSebt-nqHRZkzS5WiAyr_zeDBMrKLkDItRujS0mSIzn1hgsn-Q/viewform">Apply here (Google Form)</a>.<br>
         This is an excellent opportunity for junior researchers to gain experience in reviewing. Experienced reviewers can also apply to be a meta-reviewer (similar to Area Chair), again to gain experience. Meta-reviewers will handle at most 5 papers. Thank you!
         </p>
-
+        
         <p>
         <em>Travel awards (2024):</em> We have travel awards to sponsor under-represented students to attend the workshop. Students will also have an opportunity to interact with invited workshop speakers at a social occasion. <a href="https://docs.google.com/forms/d/e/1FAIpQLSfYBxckHeVeuEsrZKqn8DkthUatFOlhwegmUVrCxlqCcdc3Pw/viewform">Apply here (Google Form).</a>
         </p>
+        -->
 
         <h4>Topics</h4>
         <p>
@@ -381,7 +367,7 @@
 
         <br><br>
     </div>
-    -->
+
 
     <div class="container">
         <hr>
