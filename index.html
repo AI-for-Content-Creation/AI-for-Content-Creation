@@ -11,6 +11,7 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
     <link href="css/theme_1610153848925.css" rel="stylesheet"> <!-- Via Themestr.app -->
+    <link href="css/ai4cc.css" rel="stylesheet">
 
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
@@ -25,66 +26,7 @@
 
     <meta property="og:image" content="https://www.ai4cc.net/images/sm-card.jpg" />
 
-    <style>
-    p {
-        text-align: justify;
-        -webkit-hyphens: auto;
-            -moz-hyphens: auto;
-        hyphens: auto;
-    }
-
-    ol.carousel-indicators li{
-        border: 2px solid black;
-    }
-
-    .carousel-control-prev-icon{
-        border: 2px solid black;
-        background-color: gray;
-    }
-
-    .carousel-control-next-icon{
-        border: 2px solid black;
-        background-color: gray;
-    }
-
-    .carousel-caption h5{
-        border: 2px solid black;
-        background: white;
-        opacity: 80%;
-    }
-
-    .carousel-caption p{
-        border: 2px solid black;
-        background: white;
-        opacity: 80%;
-    }
-
-    .noindent{
-        padding-left: 0;
-    } 
-
-    /* 
-    .brownbrown {
-        color: #4E3629;
-    }
-
-    .brownred {
-        color: #C00404;
-    } */
-
-    .logo {
-        width: 20em;
-        padding: 1em 1em 1em 1em;
-    }
-
-    video {
-        vertical-align: middle;
-        border-style: none;
-    }
-    </style>
-
-
-  <title>AI4CC 2025</title>
+    <title>AI for Content Creation Workshop</title>
   </head>
 
   <body>
@@ -114,13 +56,16 @@
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#schedule">Schedule</a>
             </li>
-            
+            <!--
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#papers">Papers</a>
             </li>
+            -->
+            <!--
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#submission">Submission</a>
             </li>
+            -->
             <li class="nav-item">
                 <a class="nav-link link-primary" href="#previousworkshops">Previous Workshops</a>
             </li>    
@@ -128,137 +73,34 @@
         </div>
     </nav>
 
-
     <div class="container" style="margin-top: 2em">
         <div id="carouselTop" class="carousel slide" data-ride="carousel">
             <ol class="carousel-indicators">
-                <li data-target="#carouselTop" data-slide-to="0" class="active"></li>
-                <li data-target="#carouselTop" data-slide-to="1"></li>
-                <li data-target="#carouselTop" data-slide-to="2"></li>
-                <li data-target="#carouselTop" data-slide-to="3"></li>
-                <li data-target="#carouselTop" data-slide-to="4"></li>
-                <li data-target="#carouselTop" data-slide-to="5"></li>
-                <li data-target="#carouselTop" data-slide-to="6"></li>
-                <li data-target="#carouselTop" data-slide-to="7"></li>
-                <li data-target="#carouselTop" data-slide-to="8"></li>
-                <li data-target="#carouselTop" data-slide-to="9"></li>
-                <li data-target="#carouselTop" data-slide-to="10"></li>
-              </ol>
+            {% assign items = site.data.carousel %}
+            {% for i in (0..items.size) %}
+                <li data-target="#carouselTop" data-slide-to="{{ i }}" {% if forloop.first %}class="active"{% endif %}></li>
+            {% endfor %}
+            </ol>
 
             <div class="carousel-inner text-center">
-                <div class="carousel-item active">
-                    <img height="300px" src="./images/papers/ai4cc2024_Jeong_visual-style-prompting.jpg" alt="Visual Style Prompting with Swapping Self-Attention">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Jeong et al., AI4CC 2024</h5>
-                        <p class="text-dark text-center">Visual Style Prompting with Swapping Self-Attention</p>
-                    </div>
+            {% for item in items %}
+                <div class="carousel-item {% if forloop.first %}active{% endif %}">
+                <img height="300px" src="{{ item.image }}" alt="{{ item.alt }}">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5 class="text-dark text-center">{{ item.authors }}, AI4CC {{ item.year }}</h5>
+                    <p class="text-dark text-center">{{ item.title }}</p>
                 </div>
-
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/ai4cc2024_Zheng_towards-safer-ai-content-creation.jpg" alt="Towards Safer AI Content Creation by Immunizing Text-to-image Models">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Zheng et al., AI4CC 2024</h5>
-                        <p class="text-dark text-center">Towards Safer AI Content Creation by Immunizing Text-to-image Models</p>
-                    </div>
                 </div>
-
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/ai4cc2024_Barquero_seamless-human-motion-composition.jpg" alt="
-                    Seamless Human Motion Composition with Blended Positional Encodings">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Barquero et al., AI4CC 2024</h5>
-                        <p class="text-dark text-center">Seamless Human Motion Composition with Blended Positional Encodings</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/ai4cc2023_Matsunaga_fine-grained-image-editing.jpg" alt="Fine-grained Image Editing by Pixel-wise Guidance Using Diffusion Models">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Matsunaga et al., AI4CC 2023</h5>
-                        <p class="text-dark text-center">Fine-grained Image Editing by Pixel-wise Guidance Using Diffusion Models</p>
-                    </div>
-                </div>
-                
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/ai4cc2023_Zhang_text-to-image-editing.jpg" alt="Text-to-image Editing by Image Information Removal">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Zhang et al., AI4CC 2023</h5>
-                        <p class="text-dark text-center">Text-to-image Editing by Image Information Removal</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/jain_ai4cc2022_dream-fields.jpg" alt="Zero-Shot Text-Guided Object Generation with Dream Fields">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Jain et al., AI4CC 2022</h5>
-                        <p class="text-dark text-center">Zero-Shot Text-Guided Object Generation with Dream Fields</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/lee_ai4cc2022_fix-the-noise.jpg" alt="Fix the Noise: Disentangling Source Feature for Transfer Learning of StyleGAN">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Lee, Lee, Kim, Choi, & Kim, AI4CC 2022</h5>
-                        <p class="text-dark text-center">Fix the Noise: Disentangling Source Feature for Transfer Learning of StyleGAN</p>
-                    </div>
-                </div>
-                
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/jang_ai4cc2022_rics.jpg" alt="RiCS: A 2D Self-Occlusion Map for Harmonizing Volumetric Objects">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Jang, Villegas, Yang, Ceylan, Sun, & Lee, AI4CC 2022</h5>
-                        <p class="text-dark text-center">RiCS: A 2D Self-Occlusion Map for Harmonizing Volumetric Objects</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/poirier-ginter_ai4cc2022_overparameterization.jpg" alt="Overparameterization Improves StyleGAN Inversion">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Poirier-Ginter, Alexandre Lessard, Ryan Smith, Jean-François Lalonde, AI4CC 2022</h5>
-                        <p class="text-dark text-center">Overparameterization Improves StyleGAN Inversion</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/jahn_ai4cc2021_high-res-complex-transformers.jpg" alt="High-Resolution Complex Scene Synthesis with Transformers">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Jahn et al., AI4CC 2021</h5>
-                        <p class="text-dark text-center">High-Resolution Complex Scene Synthesis with Transformers</p>
-                    </div>
-                </div>
-                
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/rombach_ai4cc2020_network-fusion_exemplarguided_crop.jpg" alt="Network Fusion for Content Creation with Conditional INNs">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Rombach, Esser, and Ommer, AI4CC 2020</h5>
-                        <p class="text-dark text-center">Network Fusion for Content Creation with Conditional INNs</p>
-                    </div>
-                </div>
-
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/Cha_ai4cc2020_few-shot-font-generation.jpg" alt="Toward High-quality Few-shot Font Generation with Dual Memory">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Cha et al., AI4CC 2020</h5>
-                        <p class="text-dark text-center">Toward High-quality Few-shot Font Generation with Dual Memory</p>
-                    </div>
-                </div>
-                
-                <div class="carousel-item text-center">
-                    <img height="300px" src="./images/papers/sylvain_ai4cc2020_object-centric_image_generation.jpg" alt="Object-Centric Image Generation from Layouts">
-                    <div class="carousel-caption d-none d-md-block">
-                        <h5 class="text-dark text-center">Sylvain et al., AICC 2020</h5>
-                        <p class="text-dark text-center">Object-Centric Image Generation from Layouts</p>
-                    </div>
-                </div>
+            {% endfor %}
             </div>
 
             <a class="carousel-control-prev" href="#carouselTop" role="button" data-slide="prev">
-                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                <span class="sr-only">Previous</span>
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="sr-only">Previous</span>
             </a>
             <a class="carousel-control-next" href="#carouselTop" role="button" data-slide="next">
-                <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                <span class="sr-only">Next</span>
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="sr-only">Next</span>
             </a>
         </div>
         <br><br>
@@ -348,7 +190,7 @@
         <em>Firefly Video (Adobe, 2025), Genie 2 (DeepMind, 2024), SORA (OpenAI, 2024).</em>
     </div>
 
-
+    <!--
     <div class="container" id="submission">
         <hr>
         <h3>Author and Submission Instructions</h3>
@@ -374,13 +216,11 @@
         The best student papers will be acknowledged with a prize.
         </p>
 
-        <!--
         <p>
         <em>Reviewing:</em> We accept self-nominations for reviewers: <a href="https://docs.google.com/forms/d/e/1FAIpQLSebt-nqHRZkzS5WiAyr_zeDBMrKLkDItRujS0mSIzn1hgsn-Q/viewform">Apply here (Google Form)</a>.<br>
         This is an excellent opportunity for junior researchers to gain experience in reviewing. Experienced reviewers can also apply to be a meta-reviewer (similar to Area Chair), again to gain experience. Meta-reviewers will handle at most 5 papers. Thank you!
         </p>
         
-        -->
         <p>
         <em>Travel awards (2025):</em> We have travel awards to sponsor under-represented students to attend the workshop. Students will also have an opportunity to interact with invited workshop speakers at a social occasion. We have two $2500 cash awards. <a href="https://docs.google.com/forms/d/e/1FAIpQLScUmoPFMipsKulIgH6yMX8KV2YKDKNRi7SNrgleCsKfy-pLHA/viewform">Apply here (Google Form).</a> To be considered, fill the form before April 15th, 2025, anywhere on earth.
         </p>
@@ -408,6 +248,243 @@
             <li>Novel applications and datasets</li>
         </ul>
     </div>
+    -->
+<!-- 
+    <div class="container">
+        <hr>
+        <h1>2025</h1>
+    </div> -->
+
+    <!--
+    <div class="container" id="awards">
+        <hr>
+        <h3>Awards</h3>
+        <ul>
+        {% for item in site.data.papers_2024 %}
+            {% if item.award == "bestpaper" %}
+                <li><h5>Best paper</h5> {% include paperitem.html item=item %}</li><br>
+            {% endif %}
+        {% endfor %}
+        {% for item in site.data.papers_2024 %}
+            {% if item.award == "bestpaperrunnerup" %}
+                <li><h5>Best paper (runner up)</h5> {% include paperitem.html item=item %}</li><br>
+            {% endif %}
+        {% endfor %}
+        {% for item in site.data.papers_2024 %}
+            {% if item.award == "bestposter" %}
+                <li><h5>Best poster</h5> {% include paperitem.html item=item %}</li>
+            {% endif %}
+        {% endfor %}
+        </ul>
+    </div>
+    -->
+
+    <div class="container" id="schedule">
+        <hr>
+        <h3>2025 Schedule</h3>
+        
+        <!--<h3>2025 Schedule&mdash;<a href="Coming Soon">Video Recording</a></h3>
+        
+        <div id="videoplayer"></div>
+        <p><em>Click ▶ to jump to each talk!</em></p>
+        -->
+
+        Morning session:<br>
+        
+
+        <table class="table table-sm table-striped">
+            <thead>
+                <tr>
+                    <th scope="col" style="width:2%"><!--Play--></th>
+                    <th scope="col" style="width:5%">Time CDT</th>
+                    <th scope="col" style="width:83%"></th>
+                    <th scope="col" style="width:10%"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>
+                        <!--<button type="button" class="btn btn-outline-secondary btn-sm" onclick="videoplayer.loadVideoById('e-ETzY7qRyQ')">▶</button>-->
+                    </td>
+                    <td>09:00</td>
+                    <td>Welcome and introductions</td>
+                    <td>👋</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>09:10</td>
+                    <td>Speaker 1</td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>09:40</td>
+                    <td>Speaker 2</td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>10:10</td>
+                    <td>Coffee break</td>
+                    <td>☕</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>10:20</td>
+                    <td>Speaker 3</td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>10:50</td>
+                    <td>Speaker 4</td>
+                    <td></td>                    
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>11:20</td>
+                    <td>Poster session 1
+                        <!-- In submitted order -->
+                        <!-- Papers 
+                        <br><em>Papers</em> -->
+                        <ol class="noindent" start="1">
+                            {% for item in site.data.papers_2025 %}
+                                {% if item.poster_session == '1' and item.accepted_elsewhere == 'No' %}
+                                    <li> {% include paperitem.html item=item %} </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
+                        
+
+                        <!-- Extended Abstracts
+                        <br><em>Extended Abstracts</em> -->
+                        
+                        
+                        <!-- Accepted at Other Venues
+                        <br><em>Accepted at Other Venues</em> -->
+                        <ol class="noindent" start="1">
+                            {% for item in site.data.papers_2025 %}
+                                {% if item.poster_session == '1' and item.accepted_elsewhere == 'Yes' %}    
+                                    <li> {% include paperitem.html item=item %} </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
+                    </td>    
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>12:30</td>
+                    <td>Lunch break</td>
+                    <td>🥪</td>
+                </tr>
+            </tbody>
+        </table>
+
+
+        <br><br>
+        Afternoon session:<br>
+        
+        <table class="table table-sm table-striped">
+            <thead>
+                <tr>
+                    <th scope="col"><!--Play--></th>
+                    <th scope="col">Time CDT</th>
+                    <th scope="col"></td>
+                    <th scope="col"></th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td></td>
+                    <td>13:30</td>
+                    <td>Oral session + best paper announcement
+                        <ul class="noindent">
+                        {% for item in site.data.papers_2025 %}
+                            {% if item.decision == 'Accept (Oral)' %}
+                                <li> {% include paperitem.html item=item %} </li>
+                            {% endif %}
+                        {% endfor %}
+                        </ul>
+                    </td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>14:00</td>
+                    <td>Speaker 5</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>14:30</td>
+                    <td>Speaker 6</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>15:00</td>
+                    <td>Coffee break</td>
+                    <td>☕</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>15:15</td>
+                    <td>Late Breaking Speaker 7</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>15:45</td>
+                    <td>Panel discussion
+                        <ul class="noindent">
+                        {% for panelist in site.data.panelists_2025 %}
+                        <li>
+                            <a href="{{ panelist.webpage }}">{{ panelist.name }}</a>
+                            <br>
+                            {{ panelist.jobtitle }}, {{ panelist.affiliation }}
+                        </li>
+                        {% endfor %}
+                        </ul>
+                    </td>
+                    <td>🗣️</td>
+                </tr>
+                <tr>
+                <tr>
+                    <td></td>
+                    <td>17:15</td>
+                    <td>Poster session 2
+                        <!-- In OpenReview submitted order -->
+                        <!-- Papers 
+                        <br><em>Papers</em> -->
+                        <ol class="noindent" start="1">
+                            {% for item in site.data.papers_2025 %}
+                                {% if item.poster_session == '2' and item.accepted_elsewhere == 'No' %}
+                                    <li> {% include paperitem.html item=item %} </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ol>
+                        
+
+                        <!-- Extended Abstracts
+                        <br><em>Extended Abstracts</em> -->
+                        
+                        
+                        <!-- Accepted at Other Venues
+                        <br><em>Accepted at Other Venues</em> -->
+                        <ol class="noindent" start="1">
+                            {% for item in site.data.papers_2025 %}
+                                {% if item.poster_session == '2' and item.accepted_elsewhere == 'Yes' %}
+                                    <li> {% include paperitem.html item=item %} </li>
+                                {% endif %}
+                            {% endfor %}
+                        </ol>                        
+                    </td>
+                    <td></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 
     <div class="container text-center">
         <hr>
@@ -434,8 +511,8 @@
 
     <footer class="bg-light text-dark py-5">
         <div class="container">
+            <img src="images/logos/brown-cs-logo.svg" class="logo">
             <img src="images/logos/google_logo_tp.png" class="logo">
-            <img src="images/logos/brown-cs-logo.png" class="logo">
             <img src="images/logos/NVIDIALogo_2D.png" class="logo">
             <img src="images/logos/Adobe-Logo.png" class="logo">
             <img src="images/logos/cmu.png" class="logo">

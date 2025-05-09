@@ -1,0 +1,93 @@
+[
+  {
+    "image": "./images/papers/ai4cc2024_Jeong_visual-style-prompting.jpg",
+    "alt": "Visual Style Prompting with Swapping Self-Attention",
+    "authors": "Jeong et al.",
+    "title": "Visual Style Prompting with Swapping Self-Attention",
+    "year": 2024
+  },
+  {
+    "image": "./images/papers/ai4cc2024_Zheng_towards-safer-ai-content-creation.jpg",
+    "alt": "Towards Safer AI Content Creation by Immunizing Text-to-image Models",
+    "authors": "Zheng et al.",
+    "title": "Towards Safer AI Content Creation by Immunizing Text-to-image Models",
+    "year": 2024
+  },
+  {
+    "image": "./images/papers/ai4cc2024_Barquero_seamless-human-motion-composition.jpg",
+    "alt": "Seamless Human Motion Composition with Blended Positional Encodings",
+    "authors": "Barquero et al.",
+    "title": "Seamless Human Motion Composition with Blended Positional Encodings",
+    "year": 2024
+  },
+  {
+    "image": "./images/papers/ai4cc2023_Matsunaga_fine-grained-image-editing.jpg",
+    "alt": "Fine-grained Image Editing by Pixel-wise Guidance Using Diffusion Models",
+    "authors": "Matsunaga et al.",
+    "title": "Fine-grained Image Editing by Pixel-wise Guidance Using Diffusion Models",
+    "year": 2023
+  },
+  {
+    "image": "./images/papers/ai4cc2023_Zhang_text-to-image-editing.jpg",
+    "alt": "Text-to-image Editing by Image Information Removal",
+    "authors": "Zhang et al.",
+    "title": "Text-to-image Editing by Image Information Removal",
+    "year": 2023
+  },
+  {
+    "image": "./images/papers/jain_ai4cc2022_dream-fields.jpg",
+    "alt": "Zero-Shot Text-Guided Object Generation with Dream Fields",
+    "authors": "Jain et al.",
+    "title": "Zero-Shot Text-Guided Object Generation with Dream Fields",
+    "year": 2022
+  },
+  {
+    "image": "./images/papers/lee_ai4cc2022_fix-the-noise.jpg",
+    "alt": "Fix the Noise: Disentangling Source Feature for Transfer Learning of StyleGAN",
+    "authors": "Lee, Lee, Kim, Choi, & Kim",
+    "title": "Fix the Noise: Disentangling Source Feature for Transfer Learning of StyleGAN",
+    "year": 2022
+  },
+  {
+    "image": "./images/papers/jang_ai4cc2022_rics.jpg",
+    "alt": "RiCS: A 2D Self-Occlusion Map for Harmonizing Volumetric Objects",
+    "authors": "Jang, Villegas, Yang, Ceylan, Sun, & Lee",
+    "title": "RiCS: A 2D Self-Occlusion Map for Harmonizing Volumetric Objects",
+    "year": 2022
+  },
+  {
+    "image": "./images/papers/poirier-ginter_ai4cc2022_overparameterization.jpg",
+    "alt": "Overparameterization Improves StyleGAN Inversion",
+    "authors": "Poirier-Ginter, Alexandre Lessard, Ryan Smith, Jean-François Lalonde",
+    "title": "Overparameterization Improves StyleGAN Inversion",
+    "year": 2022
+  },
+  {
+    "image": "./images/papers/jahn_ai4cc2021_high-res-complex-transformers.jpg",
+    "alt": "High-Resolution Complex Scene Synthesis with Transformers",
+    "authors": "Jahn et al.",
+    "title": "High-Resolution Complex Scene Synthesis with Transformers",
+    "year": 2021
+  },
+  {
+    "image": "./images/papers/rombach_ai4cc2020_network-fusion_exemplarguided_crop.jpg",
+    "alt": "Network Fusion for Content Creation with Conditional INNs",
+    "authors": "Rombach, Esser, and Ommer",
+    "title": "Network Fusion for Content Creation with Conditional INNs",
+    "year": 2020
+  },
+  {
+    "image": "./images/papers/Cha_ai4cc2020_few-shot-font-generation.jpg",
+    "alt": "Toward High-quality Few-shot Font Generation with Dual Memory",
+    "authors": "Cha et al.",
+    "title": "Toward High-quality Few-shot Font Generation with Dual Memory",
+    "year": 2020
+  },
+  {
+    "image": "./images/papers/sylvain_ai4cc2020_object-centric_image_generation.jpg",
+    "alt": "Object-Centric Image Generation from Layouts",
+    "authors": "Sylvain et al.",
+    "title": "Object-Centric Image Generation from Layouts",
+    "year": 2020
+  }
+]
