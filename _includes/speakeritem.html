@@ -1,0 +1,47 @@
+{% comment %}
+This include expects a 'speaker' object (from your CSV) and a 'target_time' string.
+{% endcomment %}
+
+{% comment %} Format the time for display {% endcomment %}
+{% assign speaker_time_display = speaker.time | strip %}
+{% if speaker_time_display.size == 4 %}
+  {% assign hour = speaker_time_display | slice: 0, 2 %}
+  {% assign minute = speaker_time_display | slice: 2, 2 %}
+  {% assign formatted_speaker_time = hour | append: ':' | append: minute %}
+{% else %}
+  {% assign formatted_speaker_time = speaker_time_display %}
+{% endif %}
+
+{% comment %} For comparison, ensure both are stripped of whitespace {% endcomment %}
+{% assign speaker_time_for_comparison = speaker.time | strip %}
+{% assign target_time_stripped = include.target_time | strip %}
+
+{% if speaker_time_for_comparison == target_time_stripped %}
+<td>
+  {% comment %} Empty first column for play button on recording. {% endcomment %}
+</td> 
+<td>
+  {{ formatted_speaker_time }}
+</td>
+<td>
+  {% if speaker.webpage %}
+    <a href="{{ speaker.webpage }}">{{ speaker.name }}</a>
+  {% else %}
+    {{ speaker.name }}
+  {% endif %}
+  {% if speaker.affiliation %}
+    &nbsp;({{ speaker.affiliation }})
+  {% endif %}
+</td>
+<td>
+  {% if speaker.bluesky %}
+    <a href="{{ speaker.bluesky }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/images/logos/Bluesky_Logo.svg' | relative_url }}" alt="Bluesky" style="width: 20px; height: 20px;">
+    </a>
+  {% elsif speaker.x %}
+    <a href="{{ speaker.x }}" target="_blank" rel="noopener noreferrer">
+      <img src="{{ '/images/logos/X_logo_black.svg' | relative_url }}" alt="X" style="width: 20px; height: 20px;">
+    </a>
+  {% endif %}
+</td>
+{% endif %}
