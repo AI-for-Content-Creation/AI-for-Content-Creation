@@ -338,7 +338,7 @@
                         <!-- In submitted order -->
                         <!-- Papers 
                         <br><em>Papers</em> -->
-                        <ol class="noindent" start="1">
+                        <ol class="noindent" start="412">
                             {% for item in site.data.papers_2025 %}
                                 {% if item.poster_session == '1' and item.accepted_elsewhere == 'No' %}
                                     <li> {% include paperitem.html item=item %} </li>
@@ -353,7 +353,7 @@
                         
                         <!-- Accepted at Other Venues
                         <br><em>Accepted at Other Venues</em> -->
-                        <ol class="noindent" start="1">
+                        <ol class="noindent" start="426">
                             {% for item in site.data.papers_2025 %}
                                 {% if item.poster_session == '1' and item.accepted_elsewhere == 'Yes' %}    
                                     <li> {% include paperitem.html item=item %} </li>
@@ -455,7 +455,7 @@
                         <!-- In OpenReview submitted order -->
                         <!-- Papers 
                         <br><em>Papers</em> -->
-                        <ol class="noindent" start="1">
+                        <ol class="noindent" start="412">
                             {% for item in site.data.papers_2025 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'No' %}
                                     <li> {% include paperitem.html item=item %} </li>
@@ -470,7 +470,7 @@
                         
                         <!-- Accepted at Other Venues
                         <br><em>Accepted at Other Venues</em> -->
-                        <ol class="noindent" start="1">
+                        <ol class="noindent" start="424">
                             {% for item in site.data.papers_2025 %}
                                 {% if item.poster_session == '2' and item.accepted_elsewhere == 'Yes' %}
                                     <li> {% include paperitem.html item=item %} </li>
